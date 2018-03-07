@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class TransitionManagerMenu : MonoBehaviour {
@@ -12,5 +13,10 @@ public class TransitionManagerMenu : MonoBehaviour {
 			}
 		}
 		lastPosition = currentItem;
+	}
+
+	public void LoadScenes(int levelNum)
+	{
+		SceneManager.LoadSceneAsync ("Level"+levelNum);
 	}
 }
