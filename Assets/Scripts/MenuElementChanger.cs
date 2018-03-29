@@ -6,13 +6,15 @@ using UnityEngine.EventSystems;
 
 public class MenuElementChanger : MonoBehaviour
 {
-
+	public bool ignoreTransition = false;
 	public MenuElementChanger[] onActivateItems;
 	public UnityEvent onEnable;
 	public UnityEvent onDisable;
 
 	void Start ()
 	{
+		if (ignoreTransition)
+			return;
 		EventTrigger eventTrigger = GetComponent<EventTrigger> ();
 		if (eventTrigger == null)
 			eventTrigger = gameObject.AddComponent<EventTrigger> ();

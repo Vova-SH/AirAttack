@@ -1,0 +1,208 @@
+fileFormatVersion: 2
+guid: 1c6e4199d45741443b41137618456b2d
+timeCreated: 1522309197
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: ArmL1
+    100002: ArmL2
+    100004: ArmR1
+    100006: ArmR2
+    100008: Body
+    100010: Cone005
+    100012: Cone006
+    100014: Cone007
+    100016: Cone008
+    100018: Cone009
+    100020: Cone010
+    100022: Cone011
+    100024: Cone012
+    100026: Cone1
+    100028: Cone2
+    100030: Cone3
+    100032: Cone4
+    100034: ConeBleu
+    100036: ConeBleu001
+    100038: ConeBleu002
+    100040: droid
+    100042: //RootNode
+    100044: Fire
+    100046: FireBis
+    100048: FireTert
+    100050: Flap1
+    100052: Flap2
+    100054: Flap3
+    100056: PinceL
+    100058: PinceR
+    400000: ArmL1
+    400002: ArmL2
+    400004: ArmR1
+    400006: ArmR2
+    400008: Body
+    400010: Cone005
+    400012: Cone006
+    400014: Cone007
+    400016: Cone008
+    400018: Cone009
+    400020: Cone010
+    400022: Cone011
+    400024: Cone012
+    400026: Cone1
+    400028: Cone2
+    400030: Cone3
+    400032: Cone4
+    400034: ConeBleu
+    400036: ConeBleu001
+    400038: ConeBleu002
+    400040: droid
+    400042: //RootNode
+    400044: Fire
+    400046: FireBis
+    400048: FireTert
+    400050: Flap1
+    400052: Flap2
+    400054: Flap3
+    400056: PinceL
+    400058: PinceR
+    2100000: Robot
+    2100002: Fire
+    2300000: Cone005
+    2300002: Cone006
+    2300004: Cone007
+    2300006: Cone008
+    2300008: Cone009
+    2300010: Cone010
+    2300012: Cone011
+    2300014: Cone012
+    2300016: Cone1
+    2300018: Cone2
+    2300020: Cone3
+    2300022: Cone4
+    2300024: ConeBleu
+    2300026: ConeBleu001
+    2300028: ConeBleu002
+    3300000: Cone005
+    3300002: Cone006
+    3300004: Cone007
+    3300006: Cone008
+    3300008: Cone009
+    3300010: Cone010
+    3300012: Cone011
+    3300014: Cone012
+    3300016: Cone1
+    3300018: Cone2
+    3300020: Cone3
+    3300022: Cone4
+    3300024: ConeBleu
+    3300026: ConeBleu001
+    3300028: ConeBleu002
+    4300000: droid
+    4300002: Cone1
+    4300004: Cone2
+    4300006: Cone3
+    4300008: Cone4
+    4300010: ConeBleu
+    4300012: ConeBleu001
+    4300014: Cone005
+    4300016: Cone006
+    4300018: Cone007
+    4300020: Cone008
+    4300022: ConeBleu002
+    4300024: Cone009
+    4300026: Cone010
+    4300028: Cone011
+    4300030: Cone012
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: droid
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fire
+    second: {fileID: 2100000, guid: ed3fe8d6c21bb164081a4722fec9855b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Robot
+    second: {fileID: 2100000, guid: 7dd644f10c904ba44bd7fbadd392fd68, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
