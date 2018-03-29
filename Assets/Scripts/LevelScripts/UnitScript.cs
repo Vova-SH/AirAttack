@@ -53,8 +53,11 @@ public class UnitScript : MonoBehaviour
 	{
 		//TODO: add type
 		health -= damage;
-		if (health < 0)
+		if (health < 0) {
 			Destroy (gameObject);
+			if (callback != null)
+				callback.OnDestroy ();
+		}
 		return health < 0;
 	}
 
@@ -66,5 +69,6 @@ public class UnitScript : MonoBehaviour
 	public interface MoveStatus
 	{
 		void OnCompleteMove ();
+		void OnDestroy();
 	}
 }

@@ -6,15 +6,17 @@ public class MoveArmy : MonoBehaviour, UnitScript.MoveStatus
 {
 	public WayPoints[] wayPoints;
 	public UnitScript[] units;
+	public int activeUnits;
 
 	private int completeMove = 0, currentPoint = 0;
 	private Coroutine onWaitCoroutine = null;
 
 	void Start ()
 	{
+		activeUnits = units.Length;
 		foreach (UnitScript unit in units) {
 			unit.SetMoveStatusListener (this);
-			unit.SetDelta (wayPoints [0].gameObject.transform.position);
+			unit.SetDelta (wayPoints [0].transform.position);
 		}
 		onWaitCoroutine = StartCoroutine ("Wait");
 	}
@@ -26,9 +28,9 @@ public class MoveArmy : MonoBehaviour, UnitScript.MoveStatus
 		
 		Gizmos.color = Color.white;
 		for (int i = 1; i < wayPoints.Length; i++) {
-			if (wayPoints [i - 1].gameObject == null || wayPoints [i].gameObject == null)
+			if (wayPoints [i - 1].transform == null || wayPoints [i].transform == null)
 				return;
-			Gizmos.DrawLine (wayPoints [i - 1].gameObject.transform.position, wayPoints [i].gameObject.transform.position);
+			Gizmos.DrawLine (wayPoints [i - 1].transform.position, wayPoints [i].transform.position);
 		}
 	}
 
@@ -48,6 +50,17 @@ public class MoveArmy : MonoBehaviour, UnitScript.MoveStatus
 		}
 	}
 
+	void UnitScript.MoveStatus.OnDestroy ()
+	{
+		activeUnits--;
+
+		if (completeMove == units.Length) 
+		{
+			onWaitCoroutine = StartCoroutine ("Wait");
+			//TODO: add stop!
+		}
+	}
+
 	IEnumerator Wait()
 	{
 		yield return new WaitForSeconds(wayPoints [currentPoint].waitTime);
@@ -55,7 +68,7 @@ public class MoveArmy : MonoBehaviour, UnitScript.MoveStatus
 		if (currentPoint < wayPoints.Length) {
 			completeMove = 0;
 			foreach (UnitScript unit in units) {
-				unit.MoveTo (wayPoints [currentPoint].gameObject.transform.position);
+				unit.MoveTo (wayPoints [currentPoint].transform.position);
 			}
 		} else {
 		//TODO: add finish level
