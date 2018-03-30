@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class MoveArmy : MonoBehaviour, UnitScript.MoveStatus
 {
-	public WayPoints[] wayPoints;
+	public WayPoint[] wayPoints;
 	public UnitScript[] units;
-	public int activeUnits;
+	public int startWaitTime = 0;
 
+	private int activeUnits;
 	private int completeMove = 0, currentPoint = 0;
 	private Coroutine onWaitCoroutine = null;
 
@@ -16,21 +17,23 @@ public class MoveArmy : MonoBehaviour, UnitScript.MoveStatus
 		activeUnits = units.Length;
 		foreach (UnitScript unit in units) {
 			unit.SetMoveStatusListener (this);
-			unit.SetDelta (wayPoints [0].transform.position);
+			unit.SetDelta (transform.position);
 		}
 		onWaitCoroutine = StartCoroutine ("Wait");
 	}
 
 	void OnDrawGizmos ()
 	{
-		if (wayPoints.Length < 2)
+		if (wayPoints.Length < 1)
 			return;
 		
 		Gizmos.color = Color.white;
-		for (int i = 1; i < wayPoints.Length; i++) {
-			if (wayPoints [i - 1].transform == null || wayPoints [i].transform == null)
-				return;
-			Gizmos.DrawLine (wayPoints [i - 1].transform.position, wayPoints [i].transform.position);
+		Vector3 lastPos = transform.position;
+		for (int i = 0; i < wayPoints.Length; i++) {
+			if (wayPoints [i].transform == null)
+				continue;
+			Gizmos.DrawLine (lastPos, wayPoints [i].transform.position);
+			lastPos = wayPoints [i].transform.position;
 		}
 	}
 
@@ -43,35 +46,36 @@ public class MoveArmy : MonoBehaviour, UnitScript.MoveStatus
 	void UnitScript.MoveStatus.OnCompleteMove ()
 	{
 		completeMove++;
-		if (completeMove == units.Length) 
-		{
+		if (completeMove == activeUnits) {
 			onWaitCoroutine = StartCoroutine ("Wait");
-			//TODO: add stop!
 		}
 	}
 
 	void UnitScript.MoveStatus.OnDestroy ()
 	{
 		activeUnits--;
-
-		if (completeMove == units.Length) 
-		{
+		if (onWaitCoroutine == null && completeMove == activeUnits) {
 			onWaitCoroutine = StartCoroutine ("Wait");
-			//TODO: add stop!
+		} else if (onWaitCoroutine != null && activeUnits < 1) {
+			StopCoroutine ("Wait");
+			//TODO: add failLevel!
 		}
 	}
 
-	IEnumerator Wait()
+	IEnumerator Wait ()
 	{
-		yield return new WaitForSeconds(wayPoints [currentPoint].waitTime);
-		currentPoint++;
+		yield return new WaitForSeconds (startWaitTime);
 		if (currentPoint < wayPoints.Length) {
 			completeMove = 0;
 			foreach (UnitScript unit in units) {
 				unit.MoveTo (wayPoints [currentPoint].transform.position);
 			}
+			onWaitCoroutine = null;
+			currentPoint++;
+			if (currentPoint < wayPoints.Length)
+				startWaitTime = wayPoints [currentPoint].waitTime;
 		} else {
-		//TODO: add finish level
+			//TODO: add finish level
 		}
 	}
 
