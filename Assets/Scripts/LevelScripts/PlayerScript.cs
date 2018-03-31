@@ -2,22 +2,52 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerScript : MonoBehaviour {
-	
+public class PlayerScript : MonoBehaviour, MoveArmy.State
+{
+
+	public MoveArmy moveArmy;
 	public PlayerWayPoint[] wayPoints;
 	public Transform[] defaultWaitPoints;
+	public Transform forward;
 	public int speed = 10;
-	Quaternion quaternion;
-	
-	void Start () {
-		quaternion = new Quaternion();
+	public int angularVelocity = 1;
+
+	private int pointNum = -1, armyPointNum = -1;
+	private Vector3? point = null;
+
+	void Start ()
+	{
+		moveArmy.setStateListener (this);
+		if (moveArmy.startWaitTime == 0 && wayPoints.Length > 0)
+			point = wayPoints [0].transform.position;
+		else if (defaultWaitPoints.Length > 0)
+			point = defaultWaitPoints [0].transform.position;
+		//add bool when start wait path
 	}
 
-	void Update () {
+	void Update ()
+	{
 		//write correct point
-		quaternion.SetFromToRotation (transform.position, wayPoints[2].transform.position);
-		transform.position = Vector3.Lerp (transform.position, wayPoints [2].transform.position, speed * Time.deltaTime);
-		transform.rotation = quaternion * transform.rotation;
+		if (point == null) {
+			if (armyPointNum > pointNum && wayPoints.Length > pointNum) {
+				point = wayPoints [pointNum].transform.position;
+			}
+			//add circle
+		} else {
+			transform.position = Vector3.MoveTowards (transform.position, forward.position, speed * Time.deltaTime);
+			Quaternion relativePos = Quaternion.LookRotation(point.Value - transform.position);
+			Quaternion rotation = Quaternion.RotateTowards(transform.rotation, relativePos, angularVelocity * Time.deltaTime);
+			transform.rotation = rotation;
+			if (Vector3.Distance (transform.position, point.Value) < 1) {
+				point = null;
+				pointNum++;
+			}
+		}
+	}
+
+	void MoveArmy.State.AllUnitComplete (int point)
+	{
+		armyPointNum = point;
 	}
 
 	void OnDrawGizmos ()
