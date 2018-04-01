@@ -29,14 +29,14 @@ public class PlayerScript : MonoBehaviour, MoveArmy.State
 	{
 		//write correct point
 		if (point == null) {
-			if (armyPointNum > pointNum && wayPoints.Length > pointNum) {
+			if (armyPointNum >= pointNum && wayPoints.Length > pointNum) {
 				point = wayPoints [pointNum].transform.position;
 			}
 			//add circle
 		} else {
 			transform.position = Vector3.MoveTowards (transform.position, forward.position, speed * Time.deltaTime);
-			Quaternion relativePos = Quaternion.LookRotation(point.Value - transform.position);
-			Quaternion rotation = Quaternion.RotateTowards(transform.rotation, relativePos, angularVelocity * Time.deltaTime);
+			Quaternion relativePos = Quaternion.LookRotation (point.Value - transform.position);
+			Quaternion rotation = Quaternion.RotateTowards (transform.rotation, relativePos, angularVelocity * Time.deltaTime);
 			transform.rotation = rotation;
 			if (Vector3.Distance (transform.position, point.Value) < 1) {
 				point = null;
@@ -52,14 +52,16 @@ public class PlayerScript : MonoBehaviour, MoveArmy.State
 
 	void OnDrawGizmos ()
 	{
-		if (wayPoints.Length < 2)
+		if (wayPoints.Length < 1)
 			return;
 
 		Gizmos.color = Color.green;
-		for (int i = 1; i < wayPoints.Length; i++) {
-			if (wayPoints [i - 1].transform == null || wayPoints [i].transform == null)
-				return;
-			Gizmos.DrawLine (wayPoints [i - 1].transform.position, wayPoints [i].transform.position);
+		Vector3 lastPos = transform.position;
+		for (int i = 0; i < wayPoints.Length; i++) {
+			if (wayPoints [i].transform == null)
+				continue;
+			Gizmos.DrawLine (lastPos, wayPoints [i].transform.position);
+			lastPos = wayPoints [i].transform.position;
 		}
 	}
 }
