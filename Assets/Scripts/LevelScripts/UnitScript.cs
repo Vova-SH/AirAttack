@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class UnitScript : MonoBehaviour
 {
+
+	private Queue<TowerScript> towers = new Queue<TowerScript> ();
+	public Transform forward;
 	public int health = 100;
 	public int armor = 0;
 	public int speed = 5;
+	public float angularVelocity = 80f;
 
 
 	public Resistable[] resistance;
@@ -20,10 +24,29 @@ public class UnitScript : MonoBehaviour
 		//TODO: add trigger, when shoot collide
 	}
 
+	void OnTriggerEnter (Collider other)
+	{
+		TowerScript tower = other.gameObject.GetComponent<TowerScript> ();
+		if (tower != null) {
+			
+		}
+	}
+
+	void OnTriggerExit (Collider other)
+	{
+		TowerScript tower = other.gameObject.GetComponent<TowerScript> ();
+		if (tower != null) {
+
+		}
+	}
+
 	void Update ()
 	{
 		if (target != null) {
-			transform.position = Vector3.MoveTowards (transform.position, target.Value, speed * Time.deltaTime);
+			transform.position = Vector3.MoveTowards (transform.position, forward.position, speed * Time.deltaTime);
+			Quaternion relativePos = Quaternion.LookRotation (target.Value - transform.position);
+			Quaternion rotation = Quaternion.RotateTowards (transform.rotation, relativePos, angularVelocity * Time.deltaTime);
+			transform.rotation = rotation;
 			if (Vector3.Distance (transform.position, target.Value) < 1) {
 				target = null;
 				if (callback != null)
