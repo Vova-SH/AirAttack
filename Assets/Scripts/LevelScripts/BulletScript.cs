@@ -2,27 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletScript : MonoBehaviour {
-	private UnitScript target;
+public class BulletScript : MonoBehaviour
+{
+
 	public float speed = 1f;
-	public int damage = 1;
+	public int damage = 5;
 
-	public static void Create(UnitScript target){
-		
-		//this.target = target;
+	public UnitScript target {
+		set {
+				target = value;
+				gameObject.SetActive (value != null);
+		}
+
+//		get { return target; }
 	}
 
-	void Start () {
-		if (target == null)
-			Debug.Log ("Oh no");
-	}
-
-
-	void Update () {
+	void Update ()
+	{/*
 		transform.position = Vector3.MoveTowards (transform.position, target.transform.position, speed * Time.deltaTime);
 		if (Vector3.Distance (transform.position, target.transform.position) < 1) {
-			//target.SetDamage (damage);
 			Destroy (gameObject);
-		}
+			//target.SetDamage (damage);
+		}*/
 	}
 }

@@ -6,6 +6,7 @@ public class TowerScript : MonoBehaviour
 {
 
 	public GameObject gun;
+	public Transform shootStart;
 	public BulletScript bullet;
 	public TowerType towerType = TowerType.OFTEN;
 	public float angularVelocity;
@@ -57,10 +58,6 @@ public class TowerScript : MonoBehaviour
 			lookPos.y = 0;
 			var rotation = Quaternion.LookRotation (lookPos);
 			gun.transform.rotation = Quaternion.Slerp (gun.transform.rotation, rotation, Time.deltaTime * angularVelocity);
-			/*
-			Quaternion relativePos = Quaternion.LookRotation (units.Peek ().transform.position - transform.position);
-			Quaternion rotation = Quaternion.RotateTowards (transform.rotation, relativePos, angularVelocity * Time.deltaTime);
-			transform.rotation = rotation;*/
 		}
 	}
 
@@ -80,7 +77,8 @@ public class TowerScript : MonoBehaviour
 	{
 		while (units.Count > 0) {
 			yield return new WaitForSeconds (timeoutSeconds);
-			//bullet.Create (units.Peek ());
+			bullet.target = units.Peek ();
+			GameObject go = Instantiate (bullet.gameObject, shootStart.position, Quaternion.identity) as GameObject;
 			if (units.Peek ().SetDamage (damage, towerType))
 				units.Dequeue ();
 		}
