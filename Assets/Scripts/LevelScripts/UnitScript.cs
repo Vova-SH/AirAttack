@@ -5,7 +5,7 @@ using UnityEngine;
 public class UnitScript : MonoBehaviour
 {
 
-	private Queue<TowerScript> towers = new Queue<TowerScript> ();
+	private List<TowerScript> towers = new List<TowerScript> ();
 	public Transform forward;
 	public int health = 100;
 	public int armor = 0;
@@ -28,7 +28,7 @@ public class UnitScript : MonoBehaviour
 	{
 		TowerScript tower = other.gameObject.GetComponent<TowerScript> ();
 		if (tower != null) {
-			
+			towers.Add (tower);
 		}
 	}
 
@@ -36,7 +36,7 @@ public class UnitScript : MonoBehaviour
 	{
 		TowerScript tower = other.gameObject.GetComponent<TowerScript> ();
 		if (tower != null) {
-
+			towers.Remove (tower);
 		}
 	}
 
@@ -72,16 +72,18 @@ public class UnitScript : MonoBehaviour
 		delta.z -= transform.position.z;
 	}
 
-	public bool SetDamage (int damage, TowerScript.TowerType type)
+	public void SetDamage (int damage, TowerScript.TowerType type)
 	{
 		//TODO: add type
 		health -= damage;
 		if (health < 0) {
+			for (int i = 0; i < towers.Count; i++) {
+				towers[i].DestroyUnit (this);
+			}
 			Destroy (gameObject);
 			if (callback != null)
 				callback.OnDestroy ();
 		}
-		return health < 0;
 	}
 
 	public void SetMoveStatusListener (MoveStatus listener)
@@ -92,6 +94,7 @@ public class UnitScript : MonoBehaviour
 	public interface MoveStatus
 	{
 		void OnCompleteMove ();
-		void OnDestroy();
+
+		void OnDestroy ();
 	}
 }

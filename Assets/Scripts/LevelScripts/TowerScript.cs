@@ -20,12 +20,13 @@ public class TowerScript : MonoBehaviour
 		COLD
 	}
 
-	private Queue<UnitScript> units = new Queue<UnitScript> ();
+	private List<UnitScript> units = new List<UnitScript> ();
 	private SphereCollider sphereCollider;
 	private Coroutine shoot = null;
 
 	void Start ()
 	{
+		bullet.player = GameObject.FindWithTag ("Player");
 		sphereCollider = gameObject.AddComponent<SphereCollider> ();
 		sphereCollider.radius = radius;
 		sphereCollider.isTrigger = true;
@@ -35,7 +36,7 @@ public class TowerScript : MonoBehaviour
 	{
 		UnitScript unit = other.gameObject.GetComponent<UnitScript> ();
 		if (unit != null) {
-			units.Enqueue (unit);
+			units.Add (unit);
 			if (shoot == null)
 				shoot = StartCoroutine ("Shoot");
 		}
@@ -45,7 +46,7 @@ public class TowerScript : MonoBehaviour
 	{
 		UnitScript unit = other.gameObject.GetComponent<UnitScript> ();
 		if (unit != null) {
-			units.Dequeue ();
+			units.Remove (unit);
 			if (units.Count == 0 && shoot != null)
 				StopCoroutine (shoot);
 		}
@@ -54,11 +55,16 @@ public class TowerScript : MonoBehaviour
 	void Update ()
 	{
 		if (units.Count != 0) {
-			var lookPos = units.Peek ().transform.position - gun.transform.position;
+			var lookPos = units[units.Count-1].transform.position - gun.transform.position;
 			lookPos.y = 0;
 			var rotation = Quaternion.LookRotation (lookPos);
 			gun.transform.rotation = Quaternion.Slerp (gun.transform.rotation, rotation, Time.deltaTime * angularVelocity);
 		}
+	}
+
+	public void DestroyUnit (UnitScript unit)
+	{
+		units.Remove (unit);
 	}
 
 	void OnDrawGizmosSelected ()
@@ -77,10 +83,8 @@ public class TowerScript : MonoBehaviour
 	{
 		while (units.Count > 0) {
 			yield return new WaitForSeconds (timeoutSeconds);
-			bullet.target = units.Peek ();
 			GameObject go = Instantiate (bullet.gameObject, shootStart.position, Quaternion.identity) as GameObject;
-			if (units.Peek ().SetDamage (damage, towerType))
-				units.Dequeue ();
+			go.GetComponent<BulletScript>().Target = units[units.Count-1];
 		}
 	}
 
