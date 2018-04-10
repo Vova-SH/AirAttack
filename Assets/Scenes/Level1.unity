@@ -636,7 +636,7 @@ GameObject:
   - component: {fileID: 100219185}
   m_Layer: 0
   m_Name: Point (4)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -652,7 +652,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &109788471
 Prefab:
@@ -899,7 +899,7 @@ GameObject:
   - component: {fileID: 116126457}
   m_Layer: 0
   m_Name: Point (14)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -915,7 +915,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 15
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &129502594
 GameObject:
@@ -1151,7 +1151,7 @@ GameObject:
   - component: {fileID: 166362642}
   m_Layer: 0
   m_Name: Point (29)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1167,7 +1167,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 30
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &172967807
 GameObject:
@@ -1179,7 +1179,7 @@ GameObject:
   - component: {fileID: 172967808}
   m_Layer: 0
   m_Name: Point (5)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1195,7 +1195,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &180458137
 Prefab:
@@ -1452,7 +1452,7 @@ GameObject:
   - component: {fileID: 197091001}
   m_Layer: 0
   m_Name: Point (18)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1468,7 +1468,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 19
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &228003227
 Prefab:
@@ -1649,7 +1649,7 @@ Transform:
   m_Children:
   - {fileID: 705901898}
   m_Father: {fileID: 1076734880}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &229367313
 Animator:
@@ -1771,7 +1771,7 @@ GameObject:
   - component: {fileID: 248334128}
   m_Layer: 0
   m_Name: Point (26)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1787,7 +1787,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 27
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &260116820
 Prefab:
@@ -2049,7 +2049,7 @@ GameObject:
   - component: {fileID: 359114687}
   m_Layer: 0
   m_Name: Point (9)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2065,7 +2065,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &372935757
 Prefab:
@@ -2203,7 +2203,7 @@ GameObject:
   - component: {fileID: 374539812}
   m_Layer: 0
   m_Name: Point (11)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2219,7 +2219,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &374727622
 Prefab:
@@ -2923,7 +2923,7 @@ GameObject:
   - component: {fileID: 505494735}
   m_Layer: 0
   m_Name: Point (23)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2939,7 +2939,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 24
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &512067264
 Prefab:
@@ -3551,7 +3551,7 @@ GameObject:
   - component: {fileID: 582831810}
   m_Layer: 0
   m_Name: Point (6)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3567,7 +3567,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &598835659
 Prefab:
@@ -3987,7 +3987,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1076734880}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &705901897
 Prefab:
@@ -4729,7 +4729,7 @@ GameObject:
   - component: {fileID: 796724716}
   m_Layer: 0
   m_Name: Point (2)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4745,7 +4745,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &803223315
 Prefab:
@@ -4931,7 +4931,7 @@ GameObject:
   - component: {fileID: 809129696}
   m_Layer: 0
   m_Name: Point (28)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4947,7 +4947,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 29
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &813267653
 GameObject:
@@ -4976,36 +4976,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1474953333}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &841488850
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 841488851}
-  m_Layer: 0
-  m_Name: DefaultWaitPoints
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &841488851
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 841488850}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1328387820}
-  - {fileID: 1098359243}
-  m_Father: {fileID: 1076734880}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &857334183
 Prefab:
@@ -5580,7 +5550,7 @@ GameObject:
   - component: {fileID: 912491250}
   m_Layer: 0
   m_Name: Point (24)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5596,7 +5566,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 25
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &916544696
 Prefab:
@@ -6181,7 +6151,7 @@ GameObject:
   - component: {fileID: 1076734881}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6196,7 +6166,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 15, z: -90}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 841488851}
   - {fileID: 700121074}
   - {fileID: 229367312}
   m_Father: {fileID: 0}
@@ -6213,105 +6182,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24190b8833e214e44a33645739a8b6ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveArmy: {fileID: 1509464712}
   wayPoints:
-  - transform: {fileID: 1850352965}
-    waitPoints:
-    - {fileID: 1294214387}
-    - {fileID: 1752727832}
-  - transform: {fileID: 796724716}
-    waitPoints: []
-  - transform: {fileID: 1736346756}
-    waitPoints: []
-  - transform: {fileID: 100219185}
-    waitPoints: []
-  - transform: {fileID: 172967808}
-    waitPoints: []
-  - transform: {fileID: 582831810}
-    waitPoints: []
-  - transform: {fileID: 1600630877}
-    waitPoints: []
-  - transform: {fileID: 1368118865}
-    waitPoints: []
-  - transform: {fileID: 359114687}
-    waitPoints: []
-  - transform: {fileID: 1341540900}
-    waitPoints: []
-  - transform: {fileID: 374539812}
-    waitPoints: []
-  - transform: {fileID: 1622442890}
-    waitPoints: []
-  - transform: {fileID: 1412554589}
-    waitPoints: []
-  - transform: {fileID: 116126457}
-    waitPoints: []
-  - transform: {fileID: 2001741877}
-    waitPoints: []
-  - transform: {fileID: 1376573349}
-    waitPoints: []
-  - transform: {fileID: 1680266701}
-    waitPoints: []
-  - transform: {fileID: 197091001}
-    waitPoints: []
-  - transform: {fileID: 2119918686}
-    waitPoints: []
-  - transform: {fileID: 1762386687}
-    waitPoints: []
-  - transform: {fileID: 1138066560}
-    waitPoints: []
-  - transform: {fileID: 2050090011}
-    waitPoints: []
-  - transform: {fileID: 505494735}
-    waitPoints: []
-  - transform: {fileID: 912491250}
-    waitPoints: []
-  - transform: {fileID: 1418574354}
-    waitPoints: []
-  - transform: {fileID: 248334128}
-    waitPoints: []
-  - transform: {fileID: 1916488242}
-    waitPoints: []
-  - transform: {fileID: 809129696}
-    waitPoints: []
-  - transform: {fileID: 166362642}
-    waitPoints: []
-  - transform: {fileID: 1480890817}
-    waitPoints: []
-  parentDefaultWaitPoint: {fileID: 841488851}
-  defaultWaitPoints:
-  - {fileID: 1328387820}
-  - {fileID: 1098359243}
+  - {fileID: 1850352965}
+  - {fileID: 796724716}
+  - {fileID: 1736346756}
+  - {fileID: 100219185}
+  - {fileID: 172967808}
+  - {fileID: 582831810}
+  - {fileID: 1600630877}
+  - {fileID: 1368118865}
+  - {fileID: 359114687}
+  - {fileID: 1341540900}
+  - {fileID: 374539812}
+  - {fileID: 1622442890}
+  - {fileID: 1412554589}
+  - {fileID: 116126457}
+  - {fileID: 2001741877}
+  - {fileID: 1376573349}
+  - {fileID: 1680266701}
+  - {fileID: 197091001}
+  - {fileID: 2119918686}
+  - {fileID: 1762386687}
+  - {fileID: 1138066560}
+  - {fileID: 2050090011}
+  - {fileID: 505494735}
+  - {fileID: 912491250}
+  - {fileID: 1418574354}
+  - {fileID: 248334128}
+  - {fileID: 1916488242}
+  - {fileID: 809129696}
+  - {fileID: 166362642}
+  - {fileID: 1480890817}
   forward: {fileID: 700121074}
   speed: 10
-  angularVelocity: 80
---- !u!1 &1098359242
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1098359243}
-  m_Layer: 0
-  m_Name: Point1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1098359243
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1098359242}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -20}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 841488851}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  angularVelocity: 150
 --- !u!1001 &1107281448
 Prefab:
   m_ObjectHideFlags: 0
@@ -6521,7 +6425,7 @@ GameObject:
   - component: {fileID: 1138066560}
   m_Layer: 0
   m_Name: Point (21)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6537,7 +6441,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 22
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1146453677
 GameObject:
@@ -7502,34 +7406,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4844902911259396, guid: 01bdef6597b249b44a9530ab656246fc,
     type: 2}
   m_PrefabInternal: {fileID: 1291075243}
---- !u!1 &1294214386
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1294214387}
-  m_Layer: 0
-  m_Name: Circle point 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1294214387
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1294214386}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 10, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1314146755}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1314146754
 GameObject:
   m_ObjectHideFlags: 0
@@ -7555,8 +7431,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -90}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1294214387}
-  - {fileID: 1752727832}
   - {fileID: 1850352965}
   - {fileID: 796724716}
   - {fileID: 1736346756}
@@ -7754,34 +7628,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005,
     type: 2}
   m_PrefabInternal: {fileID: 1328011118}
---- !u!1 &1328387819
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1328387820}
-  m_Layer: 0
-  m_Name: Point0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1328387820
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1328387819}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 841488851}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1334878038
 Prefab:
   m_ObjectHideFlags: 0
@@ -7871,7 +7717,7 @@ GameObject:
   - component: {fileID: 1341540900}
   m_Layer: 0
   m_Name: Point (10)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7883,11 +7729,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1341540899}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 15, z: 66.5}
+  m_LocalPosition: {x: -2.07, y: 15, z: 66.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1351137721 stripped
 GameObject:
@@ -8112,7 +7958,7 @@ GameObject:
   - component: {fileID: 1368118865}
   m_Layer: 0
   m_Name: Point (8)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8128,7 +7974,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1376573348
 GameObject:
@@ -8140,7 +7986,7 @@ GameObject:
   - component: {fileID: 1376573349}
   m_Layer: 0
   m_Name: Point (16)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8156,7 +8002,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 17
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1383989999
 Prefab:
@@ -8227,7 +8073,7 @@ GameObject:
   - component: {fileID: 1412554589}
   m_Layer: 0
   m_Name: Point (13)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8243,7 +8089,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1418574353
 GameObject:
@@ -8255,7 +8101,7 @@ GameObject:
   - component: {fileID: 1418574354}
   m_Layer: 0
   m_Name: Point (25)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8271,7 +8117,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 26
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1437360576
 Prefab:
@@ -8697,7 +8543,7 @@ GameObject:
   - component: {fileID: 1480890817}
   m_Layer: 0
   m_Name: Point (30)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8713,7 +8559,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 31
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1483056404
 Prefab:
@@ -9010,15 +8856,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wayPoints:
   - transform: {fileID: 129502595}
-    waitTime: 1
+    waitTime: 0
   - transform: {fileID: 445225216}
-    waitTime: 3
+    waitTime: 0
   - transform: {fileID: 1117719489}
     waitTime: 0
   - transform: {fileID: 709366114}
-    waitTime: 2
+    waitTime: 0
   - transform: {fileID: 761226199}
-    waitTime: 2
+    waitTime: 0
   - transform: {fileID: 14587370}
     waitTime: 2
   - transform: {fileID: 2125029250}
@@ -9690,7 +9536,7 @@ GameObject:
   - component: {fileID: 1600630877}
   m_Layer: 0
   m_Name: Point (7)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9706,7 +9552,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1622442889
 GameObject:
@@ -9718,7 +9564,7 @@ GameObject:
   - component: {fileID: 1622442890}
   m_Layer: 0
   m_Name: Point (12)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9734,7 +9580,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1623517746
 Prefab:
@@ -10131,7 +9977,7 @@ GameObject:
   - component: {fileID: 1680266701}
   m_Layer: 0
   m_Name: Point (17)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10147,7 +9993,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 18
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1697294705
 Prefab:
@@ -10512,7 +10358,7 @@ GameObject:
   - component: {fileID: 1736346756}
   m_Layer: 0
   m_Name: Point (3)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10528,35 +10374,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1752727831
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1752727832}
-  m_Layer: 0
-  m_Name: Circle point 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1752727832
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1752727831}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: -5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1314146755}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1758005408
 Prefab:
@@ -10835,7 +10653,7 @@ GameObject:
   - component: {fileID: 1762386687}
   m_Layer: 0
   m_Name: Point (20)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10851,7 +10669,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 21
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1787746344
 Prefab:
@@ -11138,7 +10956,7 @@ GameObject:
   - component: {fileID: 1850352965}
   m_Layer: 0
   m_Name: Point (1)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11154,7 +10972,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1866625932
 Prefab:
@@ -11257,7 +11075,7 @@ GameObject:
   - component: {fileID: 1916488242}
   m_Layer: 0
   m_Name: Point (27)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11273,7 +11091,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 28
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1925651615
 Prefab:
@@ -11836,7 +11654,7 @@ GameObject:
   - component: {fileID: 2001741877}
   m_Layer: 0
   m_Name: Point (15)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11852,7 +11670,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 16
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2003557374
 Prefab:
@@ -12223,7 +12041,7 @@ GameObject:
   - component: {fileID: 2050090011}
   m_Layer: 0
   m_Name: Point (22)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12239,7 +12057,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 23
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2064119852
 GameObject:
@@ -12598,7 +12416,7 @@ GameObject:
   - component: {fileID: 2119918686}
   m_Layer: 0
   m_Name: Point (19)
-  m_TagString: Untagged
+  m_TagString: Player point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12614,7 +12432,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314146755}
-  m_RootOrder: 20
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2125029249
 GameObject:

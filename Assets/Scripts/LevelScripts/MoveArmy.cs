@@ -11,22 +11,6 @@ public class MoveArmy : MonoBehaviour, UnitScript.MoveStatus
 	private int activeUnits;
 	private int completeMove = 0, currentPoint = 0;
 	private Coroutine onWaitCoroutine = null;
-	private State callbackState = null;
-	private bool waitComplete = false;
-	private bool fixWait = false;
-	public bool FixWait
-	{
-		set
-		{
-			if (!value && waitComplete) {
-				StartCoroutine ("Wait");
-				waitComplete = false;
-			}
-			fixWait = value;
-		}
-
-		get{ return fixWait; }
-	}
 
 	void Start ()
 	{
@@ -82,12 +66,6 @@ public class MoveArmy : MonoBehaviour, UnitScript.MoveStatus
 	{
 		yield return new WaitForSeconds (startWaitTime);
 		if (currentPoint < wayPoints.Length) {
-			if (callbackState != null)
-				callbackState.AllUnitComplete (currentPoint);
-			if (fixWait == true) {
-				startWaitTime = 0;
-				waitComplete = true;
-			} else {
 				completeMove = 0;
 				foreach (UnitScript unit in units) {
 					unit.MoveTo (wayPoints [currentPoint].transform.position);
@@ -96,19 +74,8 @@ public class MoveArmy : MonoBehaviour, UnitScript.MoveStatus
 				currentPoint++;
 				if (currentPoint < wayPoints.Length)
 					startWaitTime = wayPoints [currentPoint].waitTime;
-			}
 		} else {
 			//TODO: add finish level
 		}
-	}
-
-	public void setStateListener (State state)
-	{
-		callbackState = state;
-	}
-
-	public interface State
-	{
-		void AllUnitComplete (int point);
 	}
 }
