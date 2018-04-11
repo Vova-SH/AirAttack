@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-
+	public PlayerBulletScript bullet;
 	public Transform[] wayPoints;
-	public Transform forward;
+	public Transform forward, ovrCamera;
 	public int speed = 10;
+	public float reloadTime = 0.1f;
 	public int angularVelocity = 1;
 
+	private bool isReloaded = true;
 	private int pointNum = 0;
 	private Vector3? point = null;
 
@@ -32,6 +34,13 @@ public class PlayerScript : MonoBehaviour
 				point = null;
 				pointNum++;
 			}
+		}
+
+		if (Input.GetMouseButtonDown (0) && isReloaded) {
+			Debug.Log ("Pressed primary button.");
+			isReloaded = false;
+			StartCoroutine ("Reload");
+			Instantiate (bullet.gameObject, transform.position, ovrCamera.transform.rotation);
 		}
 	}
 
@@ -62,5 +71,11 @@ public class PlayerScript : MonoBehaviour
 			Gizmos.DrawLine (lastPos, wayPoints [i].transform.position);
 			lastPos = wayPoints [i].transform.position;
 		}
+	}
+
+	IEnumerator Reload ()
+	{
+		yield return new WaitForSeconds (reloadTime);
+		isReloaded = true;
 	}
 }
