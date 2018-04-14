@@ -6,7 +6,6 @@ public class UnitScript : MonoBehaviour
 {
 
 	private List<TowerScript> towers = new List<TowerScript> ();
-	public Transform forward;
 	public int health = 100;
 	public int armor = 0;
 	public int speed = 5;
@@ -43,7 +42,7 @@ public class UnitScript : MonoBehaviour
 	void Update ()
 	{
 		if (target != null) {
-			transform.position = Vector3.MoveTowards (transform.position, forward.position, speed * Time.deltaTime);
+			transform.Translate (transform.forward*speed*Time.deltaTime);
 			Quaternion relativePos = Quaternion.LookRotation (target.Value - transform.position);
 			Quaternion rotation = Quaternion.RotateTowards (transform.rotation, relativePos, angularVelocity * Time.deltaTime);
 			transform.rotation = rotation;
