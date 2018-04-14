@@ -11,7 +11,7 @@ public class PlayerBulletScript : MonoBehaviour
 
 	void Start ()
 	{
-		StartCoroutine ("Live");
+		StartCoroutine (Live ());
 	}
 
 	void OnTriggerEnter (Collider other)
@@ -24,8 +24,9 @@ public class PlayerBulletScript : MonoBehaviour
 	}
 
 	void Update ()
-	{
-		transform.position = Vector3.MoveTowards (transform.position, Vector3.forward, speed * Time.deltaTime);
+	{ 
+		Debug.DrawRay (transform.position, transform.forward);
+		transform.Translate (transform.forward*speed*Time.deltaTime);
 	}
 
 	IEnumerator Live ()
