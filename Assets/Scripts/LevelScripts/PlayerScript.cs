@@ -6,7 +6,7 @@ public class PlayerScript : MonoBehaviour
 {
 	public PlayerBulletScript bullet;
 	public Transform[] wayPoints;
-	public Transform forward, ovrCamera;
+	public Transform ovrCamera;
 	public int speed = 10;
 	public float reloadTime = 0.1f;
 	public int angularVelocity = 1;
@@ -37,10 +37,9 @@ public class PlayerScript : MonoBehaviour
 		}
 
 		if (Input.GetMouseButtonDown (0) && isReloaded) {
-			Debug.Log ("Pressed primary button.");
 			isReloaded = false;
-			StartCoroutine ("Reload");
-			Instantiate (bullet.gameObject, transform.position, ovrCamera.transform.rotation);
+			StartCoroutine (Reload ());
+			Instantiate (bullet.gameObject, ovrCamera.position, ovrCamera.rotation);
 		}
 	}
 
