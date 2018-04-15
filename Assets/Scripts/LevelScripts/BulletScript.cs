@@ -27,5 +27,7 @@ public class BulletScript : MonoBehaviour
 			Destroy (gameObject);
 			target.SetDamage (damage, TowerScript.TowerType.OFTEN);
 		}
+
+		if(target==null) Destroy (gameObject);
 	}
 }
