@@ -25,6 +25,8 @@ public class PlayerScript : MonoBehaviour
 		if (point == null) {
 			if (pointNum < wayPoints.Length)
 				point = wayPoints [pointNum].position;
+			else
+				point = null;
 		} else {
 			transform.Translate (transform.forward * speed * Time.deltaTime);
 			Quaternion relativePos = Quaternion.LookRotation (point.Value - transform.position);
