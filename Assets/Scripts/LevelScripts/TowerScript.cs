@@ -90,8 +90,10 @@ public class TowerScript : MonoBehaviour
 	{
 		while (units.Count > 0 && health>0) {
 			yield return new WaitForSeconds (timeoutSeconds);
-			GameObject go = Instantiate (bullet.gameObject, shootStart.position, Quaternion.identity) as GameObject;
-			go.GetComponent<BulletScript> ().Target = units [units.Count - 1];
+			if (units.Count > 0 && health > 0) {
+				GameObject go = Instantiate (bullet.gameObject, shootStart.position, Quaternion.identity) as GameObject;
+				go.GetComponent<BulletScript> ().Target = units [units.Count - 1];
+			}
 		}
 	}
 

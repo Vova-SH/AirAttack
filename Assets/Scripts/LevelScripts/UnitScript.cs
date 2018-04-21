@@ -42,7 +42,7 @@ public class UnitScript : MonoBehaviour
 	void Update ()
 	{
 		if (target != null) {
-			transform.Translate (transform.forward*speed*Time.deltaTime);
+			transform.position += transform.forward * speed * Time.deltaTime;
 			Quaternion relativePos = Quaternion.LookRotation (target.Value - transform.position);
 			Quaternion rotation = Quaternion.RotateTowards (transform.rotation, relativePos, angularVelocity * Time.deltaTime);
 			transform.rotation = rotation;
@@ -77,7 +77,7 @@ public class UnitScript : MonoBehaviour
 		health -= damage;
 		if (health < 0) {
 			for (int i = 0; i < towers.Count; i++) {
-				towers[i].DestroyUnit (this);
+				towers [i].DestroyUnit (this);
 			}
 			Destroy (gameObject);
 			if (callback != null)
