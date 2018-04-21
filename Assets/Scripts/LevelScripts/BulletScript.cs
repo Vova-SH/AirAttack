@@ -21,13 +21,13 @@ public class BulletScript : MonoBehaviour
 
 	void Update ()
 	{
-		transform.position = Vector3.MoveTowards (transform.position, target.transform.position, speed * Time.deltaTime);
-		transform.rotation = Quaternion.LookRotation (player.transform.position);
-		if (Vector3.Distance (transform.position, target.transform.position) < 1) {
-			Destroy (gameObject);
-			target.SetDamage (damage, TowerScript.TowerType.OFTEN);
-		}
-
-		if(target==null) Destroy (gameObject);
+		if (target != null) {
+			transform.position = Vector3.MoveTowards (transform.position, target.transform.position, speed * Time.deltaTime);
+			transform.rotation = Quaternion.LookRotation (player.transform.position);
+			if (Vector3.Distance (transform.position, target.transform.position) < 1) {
+				Destroy (gameObject);
+				target.SetDamage (damage, TowerScript.TowerType.OFTEN);
+			}
+		} else Destroy (gameObject);
 	}
 }
