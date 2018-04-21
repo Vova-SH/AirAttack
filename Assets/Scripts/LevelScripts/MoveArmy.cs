@@ -11,9 +11,11 @@ public class MoveArmy : MonoBehaviour, UnitScript.MoveStatus
 	private int activeUnits;
 	private int completeMove = 0, currentPoint = 0;
 	private Coroutine onWaitCoroutine = null;
+	private TransitionLevelManager manager = null;
 
 	void Start ()
 	{
+		manager = GameObject.FindObjectOfType<TransitionLevelManager> ();
 		activeUnits = units.Length;
 		foreach (UnitScript unit in units) {
 			unit.SetMoveStatusListener (this);
@@ -75,7 +77,8 @@ public class MoveArmy : MonoBehaviour, UnitScript.MoveStatus
 				if (currentPoint < wayPoints.Length)
 					startWaitTime = wayPoints [currentPoint].waitTime;
 		} else {
-			//TODO: add finish level
+			if (manager != null)
+				manager.showMenu ();
 		}
 	}
 }
