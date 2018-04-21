@@ -11,7 +11,7 @@ public class PlayerScript : MonoBehaviour
 	public float reloadTime = 0.1f;
 	public int angularVelocity = 1;
 
-	private bool isReloaded = true;
+	private bool isReloaded = true, activeShoot = true;
 	private int pointNum = 0;
 	private Vector3? point = null;
 
@@ -38,7 +38,7 @@ public class PlayerScript : MonoBehaviour
 			}
 		}
 
-		if (Input.GetMouseButtonDown (0) && isReloaded) {
+		if (Input.GetMouseButtonDown (0) && isReloaded && activeShoot) {
 			isReloaded = false;
 			StartCoroutine (Reload ());
 			Instantiate (bullet.gameObject, ovrCamera.position, ovrCamera.rotation);
@@ -57,6 +57,10 @@ public class PlayerScript : MonoBehaviour
 			name = name.Remove (name.Length - 1);
 			wayPoints [int.Parse (name) - 1] = objs [i].transform;
 		}
+	}
+
+	public void setShoot(bool isShooting){
+		activeShoot = isShooting;
 	}
 
 	void OnDrawGizmos ()
