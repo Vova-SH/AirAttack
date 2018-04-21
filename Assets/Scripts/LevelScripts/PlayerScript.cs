@@ -28,7 +28,7 @@ public class PlayerScript : MonoBehaviour
 			else
 				point = null;
 		} else {
-			transform.Translate (transform.forward * speed * Time.deltaTime);
+			transform.position += transform.forward * speed * Time.deltaTime;
 			Quaternion relativePos = Quaternion.LookRotation (point.Value - transform.position);
 			Quaternion rotation = Quaternion.RotateTowards (transform.rotation, relativePos, angularVelocity * Time.deltaTime);
 			transform.rotation = rotation;
