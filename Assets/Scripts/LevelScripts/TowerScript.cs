@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TowerScript : MonoBehaviour
 {
 
 	public GameObject gun;
+	public Image progressBar;
 	public int health = 30;
 	public Transform shootStart;
 	public BulletScript bullet;
@@ -24,9 +26,11 @@ public class TowerScript : MonoBehaviour
 	private List<UnitScript> units = new List<UnitScript> ();
 	private SphereCollider sphereCollider;
 	private Coroutine shoot = null;
+	private float multiplyProgress = 0;
 
 	void Start ()
 	{
+		multiplyProgress = 1f / health;
 		bullet.player = GameObject.FindWithTag ("Player");
 		sphereCollider = gameObject.AddComponent<SphereCollider> ();
 		sphereCollider.radius = radius;
@@ -71,6 +75,7 @@ public class TowerScript : MonoBehaviour
 	public void SetDamage (int damage)
 	{
 		health -= damage;
+		progressBar.fillAmount = health * multiplyProgress;
 		//change skin or add particle
 	}
 

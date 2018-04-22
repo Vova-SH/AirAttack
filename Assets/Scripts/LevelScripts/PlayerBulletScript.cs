@@ -9,8 +9,6 @@ public class PlayerBulletScript : MonoBehaviour
 	public int damage = 5;
 	public int liveTime = 2;
 
-	private Vector3 forward = new Vector3 (0,0,1);
-
 	void Start ()
 	{
 		StartCoroutine (Live ());
@@ -28,9 +26,8 @@ public class PlayerBulletScript : MonoBehaviour
 	}
 
 	void Update ()
-	{ 
-		Debug.DrawRay (transform.position, transform.forward);
-		transform.Translate (forward*speed*Time.deltaTime);
+	{
+		transform.position += transform.forward*speed*Time.deltaTime;
 	}
 
 	IEnumerator Live ()
