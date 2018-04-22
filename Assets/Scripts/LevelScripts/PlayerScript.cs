@@ -38,7 +38,7 @@ public class PlayerScript : MonoBehaviour
 			}
 		}
 
-		if (Input.GetMouseButtonDown (0) && isReloaded && activeShoot) {
+		if ((Input.GetMouseButtonDown (0) || OVRInput.GetDown(OVRInput.Button.One)) && isReloaded && activeShoot) {
 			isReloaded = false;
 			StartCoroutine (Reload ());
 			Instantiate (bullet.gameObject, ovrCamera.position, ovrCamera.rotation);
