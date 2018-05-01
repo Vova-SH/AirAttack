@@ -78,7 +78,7 @@ public class MoveArmy : MonoBehaviour, UnitScript.MoveStatus
 					startWaitTime = wayPoints [currentPoint].waitTime;
 		} else {
 			if (manager != null)
-				manager.showMenu ();
+				manager.showMenu (activeUnits);
 		}
 	}
 }

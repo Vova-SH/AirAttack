@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class TowerScript : MonoBehaviour
 {
-
+	public AudioSource shootAudio, deathAudio;
+	public Animator gunAnimator;
+	public string disableGun;
+	public ParticleSystem particleGun;
 	public GameObject gun;
 	public Image progressBar;
 	public int health = 30;
@@ -59,11 +62,19 @@ public class TowerScript : MonoBehaviour
 
 	void Update ()
 	{
-		if (units.Count != 0) {
+		if (units.Count != 0 && health > 0) {
 			var lookPos = units [units.Count - 1].transform.position - gun.transform.position;
 			lookPos.y = 0;
 			var rotation = Quaternion.LookRotation (lookPos);
 			gun.transform.rotation = Quaternion.Slerp (gun.transform.rotation, rotation, Time.deltaTime * angularVelocity);
+		} else if (gun.transform.rotation.eulerAngles.y >= 15) {
+			var lookPos = gun.transform.position;
+			lookPos.y = 0;
+			var rotation = Quaternion.LookRotation (lookPos);
+			gun.transform.rotation = Quaternion.Slerp (gun.transform.rotation, rotation, Time.deltaTime * angularVelocity);
+		} else if (health <= 0) {
+			gun.transform.rotation = Quaternion.identity;
+			gunAnimator.Play (disableGun);
 		}
 	}
 
@@ -76,6 +87,8 @@ public class TowerScript : MonoBehaviour
 	{
 		health -= damage;
 		progressBar.fillAmount = health * multiplyProgress;
+		if (health < 1)
+			deathAudio.Play ();
 		//change skin or add particle
 	}
 
@@ -95,10 +108,14 @@ public class TowerScript : MonoBehaviour
 	{
 		while (units.Count > 0 && health>0) {
 			yield return new WaitForSeconds (timeoutSeconds);
+			particleGun.Play ();
+			shootAudio.Play ();
 			if (units.Count > 0 && health > 0) {
 				GameObject go = Instantiate (bullet.gameObject, shootStart.position, Quaternion.identity) as GameObject;
 				go.GetComponent<BulletScript> ().Target = units [units.Count - 1];
 			}
+			yield return new WaitForSeconds (0.1f);
+			particleGun.Stop ();
 		}
 	}
 
