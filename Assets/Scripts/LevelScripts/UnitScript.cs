@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UnitScript : MonoBehaviour
 {
-
+	public AudioSource death;
 	private List<TowerScript> towers = new List<TowerScript> ();
 	public int health = 100;
 	public int armor = 0;
@@ -75,10 +75,11 @@ public class UnitScript : MonoBehaviour
 	{
 		//TODO: add type
 		health -= damage;
-		if (health < 0) {
+		if (health < 1) {
 			for (int i = 0; i < towers.Count; i++) {
 				towers [i].DestroyUnit (this);
 			}
+			death.Play ();
 			Destroy (gameObject);
 			if (callback != null)
 				callback.OnDestroy ();
