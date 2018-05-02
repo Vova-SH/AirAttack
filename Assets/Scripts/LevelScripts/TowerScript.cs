@@ -5,26 +5,24 @@ using UnityEngine.UI;
 
 public class TowerScript : MonoBehaviour
 {
-	public AudioSource shootAudio, deathAudio;
+	[Header("Gun Settings")]
+	public GameObject gun;
+	public Transform shootStart;
+	public AudioSource shootAudio;
+	public ParticleSystem particleGun;
 	public Animator gunAnimator;
 	public string disableGun;
-	public ParticleSystem particleGun;
-	public GameObject gun;
-	public Image progressBar;
-	public int health = 30;
-	public Transform shootStart;
-	public BulletScript bullet;
-	public TowerType towerType = TowerType.OFTEN;
-	public float angularVelocity;
-	public int radius = 10, damage = 5;
-	public float timeoutSeconds = 1.5f;
+	public float angularVelocity = 2f;
 
-	public enum TowerType
-	{
-		OFTEN,
-		ARMORED,
-		COLD
-	}
+	[Header("State Settings")]
+	public int health = 30;
+	public AudioSource deathAudio;
+	public Image progressBar;
+
+	[Header("Shooting Settings")]
+	public BulletScript bullet;
+	public int radius = 10;
+	public float timeoutSeconds = 1.5f;
 
 	private List<UnitScript> units = new List<UnitScript> ();
 	private SphereCollider sphereCollider;
@@ -85,9 +83,10 @@ public class TowerScript : MonoBehaviour
 
 	public void SetDamage (int damage)
 	{
+		int cur = health;
 		health -= damage;
 		progressBar.fillAmount = health * multiplyProgress;
-		if (health < 1)
+		if (cur>0 && health < 1)
 			deathAudio.Play ();
 		//change skin or add particle
 	}

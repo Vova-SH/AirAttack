@@ -249,7 +249,6 @@ MonoBehaviour:
   armor: 100
   speed: 9
   angularVelocity: 80
-  resistance: []
 --- !u!23 &24261657
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8221,11 +8220,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24190b8833e214e44a33645739a8b6ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ovrCamera: {fileID: 705901898}
-  bullet: {fileID: 114500164469186620, guid: 4d74ab1478d9e4b4aa8a03b54d71ed2f, type: 2}
-  bowsIndicators: {fileID: 1995186132}
-  bowIndicatorPrefab: {fileID: 114825557762719924, guid: 9253c27c317cc684f97fcf1e67cd1d8f,
+  bulletsIndicators: {fileID: 1995186132}
+  bulletIndicatorPrefab: {fileID: 114825557762719924, guid: 9253c27c317cc684f97fcf1e67cd1d8f,
     type: 2}
+  reloadIndicator: {fileID: 1268798441}
+  speed: 8
+  angularVelocity: 30
   wayPoints:
   - {fileID: 1253923729}
   - {fileID: 579311886}
@@ -8243,16 +8243,17 @@ MonoBehaviour:
   - {fileID: 1177264326}
   - {fileID: 2134914404}
   - {fileID: 1533859375}
+  bulletPrefab: {fileID: 114500164469186620, guid: 4d74ab1478d9e4b4aa8a03b54d71ed2f,
+    type: 2}
+  reloadShootTime: 0.1
   shootStart:
   - {fileID: 1795115948}
   - {fileID: 960057843}
   - {fileID: 1112803234}
   - {fileID: 1587876616}
-  speed: 8
-  reloadBowTime: 2
-  reloadTime: 0.1
-  bowCount: 10
-  angularVelocity: 30
+  bulletCount: 10
+  reloadBulletTime: 2
+  ovrCamera: {fileID: 705901898}
 --- !u!82 &1076734882
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8982,6 +8983,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1995186134}
+  - {fileID: 1268798442}
   m_Father: {fileID: 301651514}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9021,7 +9023,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 1381756495}
-  m_PlaneDistance: 10
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -9029,7 +9031,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!1 &1117719488
 GameObject:
@@ -10084,6 +10086,110 @@ Transform:
   m_Father: {fileID: 679842127}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1268798441
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1268798442}
+  - component: {fileID: 1268798445}
+  - component: {fileID: 1268798444}
+  - component: {fileID: 1268798443}
+  - component: {fileID: 1268798446}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1268798442
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1268798441}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1115383911}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.35}
+  m_AnchorMax: {x: 1, y: 0.45}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1268798443
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1268798441}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!114 &1268798444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1268798441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.85294116, g: 0.012543264, b: 0.012543264, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 8
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 8
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Reload
+--- !u!222 &1268798445
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1268798441}
+--- !u!95 &1268798446
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1268798441}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f8e4055fc6af55b46a141f6a307badad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1324232980
 GameObject:
   m_ObjectHideFlags: 0
@@ -13643,7 +13749,7 @@ GameObject:
   - component: {fileID: 1995186136}
   - component: {fileID: 1995186135}
   m_Layer: 0
-  m_Name: Bows
+  m_Name: Bullets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

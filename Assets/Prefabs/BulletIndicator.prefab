@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222853596632139468}
   - component: {fileID: 114825557762719924}
   m_Layer: 0
-  m_Name: BowIndicator
+  m_Name: BulletIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

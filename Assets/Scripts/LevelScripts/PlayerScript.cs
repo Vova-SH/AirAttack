@@ -5,32 +5,42 @@ using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
-	public Transform ovrCamera;
-	public PlayerBulletScript bullet;
-	public GameObject bowsIndicators;
-	public Image bowIndicatorPrefab;
-	public Transform[] wayPoints;
-	public Transform[] shootStart;
+	[Header("Panel Initialize")]
+	public GameObject bulletsIndicators;
+	public Image bulletIndicatorPrefab;
+	public GameObject reloadIndicator;
+
+	[Header("Move Settings")]
 	public int speed = 10;
-	public float reloadBowTime = 2.0f;
-	public float reloadTime = 0.1f;
-	public int bowCount = 10;
 	public int angularVelocity = 1;
+	public Transform[] wayPoints;
+
+	[Header("Shoot Settings")]
+	public PlayerBulletScript bulletPrefab;
+	public float reloadShootTime = 0.1f;
+	public Transform[] shootStart;
+
+	[Header("Bullet Settings")]
+	public int bulletCount = 10;
+	public float reloadBulletTime = 2.0f;
+
+	[Header("Other Initialize")]
+	public Transform ovrCamera;
 
 	private bool isReloaded = true, activeShoot = true;
 	private int pointNum = 0;
-	private int bow;
-	private Image[] bows;
+	private int bulletCout;
+	private Image[] bullets;
 	private Vector3? point = null;
 
 	void Start ()
 	{
-		bows = new Image[bowCount];
-		bow = bowCount;
-		for (int i = 0; i < bowCount; i++) 
+		bullets = new Image[bulletCount];
+		bulletCout = bulletCount;
+		for (int i = 0; i < bulletCount; i++) 
 		{
-			bows [i] = Instantiate (bowIndicatorPrefab, bowsIndicators.transform);
-			bows [i].color = Color.white;
+			bullets [i] = Instantiate (bulletIndicatorPrefab, bulletsIndicators.transform);
+			bullets [i].color = Color.white;
 		}
 		point = wayPoints [0].position;
 	}
@@ -60,17 +70,18 @@ public class PlayerScript : MonoBehaviour
 			}
 		}
 		if (isReloaded) {
-			if ((Input.GetKey (KeyCode.R) || OVRInput.Get (OVRInput.Button.DpadLeft)) && bow < bowCount) {
+			if ((Input.GetKey (KeyCode.R) || OVRInput.Get (OVRInput.Button.DpadLeft)) && bulletCout < bulletCount) {
 				isReloaded = false;
 				StartCoroutine (ReloadBow ());
-			} else if ((Input.GetMouseButtonDown (0) || OVRInput.Get (OVRInput.Button.DpadDown)) && activeShoot && bow > 0) {
+			} else if ((Input.GetMouseButtonDown (0) || OVRInput.Get (OVRInput.Button.One)) && activeShoot && bulletCout > 0) {
 				isReloaded = false;
 				StartCoroutine (Reload ());
 				GetComponent<AudioSource> ().Play ();
-				bow--;
-				bows [bow].color = Color.gray;
+				bulletCout--;
+				bullets [bulletCout].color = Color.gray;
 				for (int i = 0; i < shootStart.Length; i++)
-					Instantiate (bullet.gameObject, shootStart [i].position, shootStart [i].rotation);
+					Instantiate (bulletPrefab.gameObject, shootStart [i].position, shootStart [i].rotation);
+				if(bulletCout==0) reloadIndicator.SetActive(true);
 			}
 		}
 	}
@@ -110,27 +121,28 @@ public class PlayerScript : MonoBehaviour
 
 	IEnumerator Reload ()
 	{
-		yield return new WaitForSeconds (reloadTime);
+		yield return new WaitForSeconds (reloadShootTime);
 		isReloaded = true;
 	}
 
 	IEnumerator ReloadBow ()
 	{
-		Animator anim = bowsIndicators.GetComponent<Animator> ();
+		reloadIndicator.SetActive(false);
+		Animator anim = bulletsIndicators.GetComponent<Animator> ();
 		if (anim != null)
 		{
 			anim.SetTrigger ("Reload");
 		}
-		yield return new WaitForSeconds (reloadBowTime);
+		yield return new WaitForSeconds (reloadBulletTime);
 		if (anim != null)
 		{
 			anim.SetTrigger ("ReloadComplete");
 		}
-		for (int i = 0; i < bowCount; i++) 
+		for (int i = 0; i < bulletCount; i++) 
 		{
-			bows [i].color = Color.white;
+			bullets [i].color = Color.white;
 		}
-		bow = bowCount;
+		bulletCout = bulletCount;
 		isReloaded = true;
 	}
 }
