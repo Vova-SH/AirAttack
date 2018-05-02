@@ -26,7 +26,7 @@ public class BulletScript : MonoBehaviour
 			transform.rotation = Quaternion.LookRotation (player.transform.position);
 			if (Vector3.Distance (transform.position, target.transform.position) < 1) {
 				Destroy (gameObject);
-				target.SetDamage (damage, TowerScript.TowerType.OFTEN);
+				target.SetDamage (damage);
 			}
 		} else Destroy (gameObject);
 	}

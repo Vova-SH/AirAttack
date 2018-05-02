@@ -28,6 +28,7 @@ public class StarsScript : MonoBehaviour
 
 	public void saveStar (int num)
 	{
+		if(PlayerPrefs.GetInt (levelNum.ToString (), 0) < num)
 		PlayerPrefs.SetInt (levelNum.ToString (), num);
 	}
 }

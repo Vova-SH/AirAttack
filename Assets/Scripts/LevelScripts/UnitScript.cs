@@ -12,8 +12,6 @@ public class UnitScript : MonoBehaviour
 	public float angularVelocity = 80f;
 
 
-	public Resistable[] resistance;
-
 	private Vector3? target = null;
 	private Vector3 delta;
 	private MoveStatus callback = null;
@@ -71,7 +69,7 @@ public class UnitScript : MonoBehaviour
 		delta.z -= transform.position.z;
 	}
 
-	public void SetDamage (int damage, TowerScript.TowerType type)
+	public void SetDamage (int damage)
 	{
 		//TODO: add type
 		health -= damage;
