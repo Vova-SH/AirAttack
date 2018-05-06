@@ -16,7 +16,6 @@ public class TransitionLevelManager : MonoBehaviour {
 	}
 
 	public void showMenu(int unitAlive) {
-		Debug.Log (""+unitAlive);
 		int hight = range.Length - 1;
 		while (hight >= 0 && range [hight] > unitAlive) {
 			hight--;
