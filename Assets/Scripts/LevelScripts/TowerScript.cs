@@ -60,19 +60,31 @@ public class TowerScript : MonoBehaviour
 
 	void Update ()
 	{
+		float angle;
+		var rotate = angularVelocity * Time.deltaTime;
 		if (units.Count != 0 && health > 0) {
+			var target = units [units.Count - 1].transform.position - gun.transform.position;
+			target.y = gun.transform.forward.y;
+			angle = Vector3.SignedAngle (target, gun.transform.forward, Vector3.up);
+			if (Mathf.Abs (angle) > rotate) {
+				var vector = angle < 0 ? Vector3.up : -Vector3.up;
+				float tmp = gun.transform.rotation.eulerAngles.y;
+				gun.transform.Rotate (vector, rotate, Space.Self);
+			}
+			/*
 			var lookPos = units [units.Count - 1].transform.position - gun.transform.position;
 			lookPos.y = 0;
 			var rotation = Quaternion.LookRotation (lookPos);
-			gun.transform.rotation = Quaternion.Slerp (gun.transform.rotation, rotation, Time.deltaTime * angularVelocity);
-		} else if (gun.transform.rotation.eulerAngles.y >= 15) {
-			var lookPos = gun.transform.position;
-			lookPos.y = 0;
-			var rotation = Quaternion.LookRotation (lookPos);
-			gun.transform.rotation = Quaternion.Slerp (gun.transform.rotation, rotation, Time.deltaTime * angularVelocity);
-		} else if (health <= 0) {
-			gun.transform.rotation = Quaternion.identity;
-			gunAnimator.Play (disableGun);
+			gun.transform.rotation = Quaternion.Slerp (gun.transform.rotation, rotation, Time.deltaTime * angularVelocity);*/
+		} else {
+			angle = gun.transform.rotation.eulerAngles.y % 360;
+			if (Mathf.Abs (angle) > rotate) {
+				var vector = angle > 0 && angle < 180 ? -Vector3.up : Vector3.up;
+				gun.transform.Rotate (vector, angularVelocity * Time.deltaTime, Space.Self);
+			} else if (health <= 0) {
+				gun.transform.rotation = Quaternion.identity;
+				gunAnimator.Play (disableGun);
+			}
 		}
 	}
 
@@ -86,8 +98,10 @@ public class TowerScript : MonoBehaviour
 		int cur = health;
 		health -= damage;
 		progressBar.fillAmount = health * multiplyProgress;
-		if (cur>0 && health < 1)
+		if (cur > 0 && health < 1) {
+			progressBar.gameObject.SetActive (false);
 			deathAudio.Play ();
+		}
 		//change skin or add particle
 	}
 
