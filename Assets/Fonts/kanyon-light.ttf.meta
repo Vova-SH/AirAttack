@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 3e5f666fe36f147de9379a68bed08a5e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Kanyon
+  fontNames:
+  - Kanyon
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 18eb93e36379f4a2ea9c299aa328a8ec, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
