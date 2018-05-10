@@ -16,7 +16,7 @@ public class PlayerScript : MonoBehaviour
 	public Transform[] wayPoints;
 
 	[Header("Shoot Settings")]
-	public PlayerBulletScript bulletPrefab;
+	public GameObject bulletPrefab;
 	public float reloadShootTime = 0.1f;
 	public Transform[] shootStart;
 
@@ -42,6 +42,7 @@ public class PlayerScript : MonoBehaviour
 			bullets [i] = Instantiate (bulletIndicatorPrefab, bulletsIndicators.transform);
 			bullets [i].color = Color.white;
 		}
+		if(wayPoints.Length>0)
 		point = wayPoints [0].position;
 	}
 
