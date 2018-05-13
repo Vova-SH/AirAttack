@@ -63,12 +63,11 @@ public class TowerScript : MonoBehaviour
 		float angle;
 		var rotate = angularVelocity * Time.deltaTime;
 		if (units.Count != 0 && health > 0) {
-			var target = units [units.Count - 1].transform.position - gun.transform.position;
+			Vector3 target = units [units.Count - 1].transform.position - gun.transform.position;
 			target.y = gun.transform.forward.y;
 			angle = Vector3.SignedAngle (target, gun.transform.forward, Vector3.up);
 			if (Mathf.Abs (angle) > rotate) {
 				var vector = angle < 0 ? Vector3.up : -Vector3.up;
-				float tmp = gun.transform.rotation.eulerAngles.y;
 				gun.transform.Rotate (vector, rotate, Space.Self);
 			}
 			/*

@@ -8,13 +8,16 @@ public class UnitScript : MonoBehaviour
 	private List<TowerScript> towers = new List<TowerScript> ();
 	public int health = 100;
 	public int armor = 0;
-	public int speed = 5;
-	public float angularVelocity = 80f;
+	public float speed = 5;
 
-
-	private Vector3? target = null;
+	private float target = -1;
 	private Vector3 delta;
 	private MoveStatus callback = null;
+
+	private Spline spline = null;
+	private unsafe WrapMode* wrapMode = null;
+	private unsafe float* progress = null, offset = null;
+	private float deltaProgress = 0, endProgress = 0;
 
 	void Start ()
 	{
@@ -37,15 +40,16 @@ public class UnitScript : MonoBehaviour
 		}
 	}
 
-	void Update ()
+	unsafe void Update ()
 	{
-		if (target != null) {
-			transform.position += transform.forward * speed * Time.deltaTime;
-			Quaternion relativePos = Quaternion.LookRotation (target.Value - transform.position);
-			Quaternion rotation = Quaternion.RotateTowards (transform.rotation, relativePos, angularVelocity * Time.deltaTime);
-			transform.rotation = rotation;
-			if (Vector3.Distance (transform.position, target.Value) < 1) {
-				target = null;
+		if (target > 0) {
+			var passed = ((*progress) - deltaProgress) * speed + *offset;
+			SplineMovable.UpdateGameObject (transform, delta, spline, *wrapMode, passed);
+			transform.position -= delta;
+
+			if (target <= passed) {
+				target = -1;
+				endProgress = *progress;
 				if (callback != null)
 					callback.OnCompleteMove ();
 			}
@@ -53,12 +57,10 @@ public class UnitScript : MonoBehaviour
 		
 	}
 
-	public void MoveTo (Vector3 vec3)
+	public unsafe void MoveTo (float progress)
 	{
-		vec3.x -= delta.x;
-		vec3.y -= delta.y;
-		vec3.z -= delta.z;
-		target = vec3;
+		deltaProgress += (*this.progress) - endProgress;
+		target = progress;
 	}
 
 	public void SetDelta (Vector3 vec3)
@@ -67,6 +69,26 @@ public class UnitScript : MonoBehaviour
 		delta.x -= transform.position.x;
 		delta.y -= transform.position.y;
 		delta.z -= transform.position.z;
+	}
+
+	public unsafe void SetProgress (float* progress)
+	{
+		this.progress = progress;
+	}
+
+	public unsafe void SetOffset (float* offset)
+	{
+		this.offset = offset;
+	}
+
+	public void SetSpline (Spline spline)
+	{
+		this.spline = spline;
+	}
+
+	public unsafe void SetWrapMode (WrapMode* mode)
+	{
+		wrapMode = mode;
 	}
 
 	public void SetDamage (int damage)
@@ -82,6 +104,13 @@ public class UnitScript : MonoBehaviour
 			if (callback != null)
 				callback.OnDestroy ();
 		}
+	}
+
+	unsafe void OnDestroy()
+	{
+		spline = null;
+		progress = null;
+		wrapMode = null;
 	}
 
 	public void SetMoveStatusListener (MoveStatus listener)

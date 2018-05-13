@@ -4,6 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 public class WayPoint {
-	public Transform transform;
+	[Range(0, 1)]
+	public float progress;
 	public int waitTime = 0;
 }
