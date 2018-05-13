@@ -88,7 +88,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224612145842953404}
-  - component: {fileID: 114064981772999340}
   - component: {fileID: 114798701474001374}
   - component: {fileID: 114978205733215186}
   m_Layer: 5
@@ -161,72 +160,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114064981772999340
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1602163057833964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 114039184492115862}
-          m_MethodName: set_sprite
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 21300000, guid: abd5d89f462ddc1409a455f47e05aed8,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 114039184492115862}
-          m_MethodName: set_sprite
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 21300000, guid: 5719cbec9fe0920409490cfe0519bfbf,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: LoadScenes
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 1
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  delegates: []
 --- !u!114 &114155402005451810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -444,8 +377,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c45a825599da074fbbef41595e3cef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelNum: 0
   textView: {fileID: 0}
+  imageView: {fileID: 114039184492115862}
+  disableColor: {r: 1, g: 0.41037738, b: 0.41037738, a: 1}
+  selectedSprite: {fileID: 21300000, guid: abd5d89f462ddc1409a455f47e05aed8, type: 3}
   onSelectText: Coming soon
+  transition: {fileID: 0}
 --- !u!222 &222201117183023882
 CanvasRenderer:
   m_ObjectHideFlags: 1
