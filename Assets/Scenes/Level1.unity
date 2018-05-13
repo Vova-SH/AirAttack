@@ -2908,8 +2908,8 @@ GameObject:
   m_Component:
   - component: {fileID: 552021814}
   - component: {fileID: 552021813}
-  - component: {fileID: 552021812}
   - component: {fileID: 552021815}
+  - component: {fileID: 552021812}
   m_Layer: 0
   m_Name: System
   m_TagString: Untagged
@@ -2925,27 +2925,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 552021811}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f1a9a1d119a5944aacfb87d1ec283a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e933e81d3c20c74ea6fdc708a67e3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayTransform: {fileID: 301651514}
-  joyPadClickButton: 1
-  gazeClickKey: 32
-  performSphereCastForGazepointer: 1
-  matchNormalOnPhysicsColliders: 0
-  useRightStickScroll: 1
-  rightStickDeadZone: 0.15
-  useSwipeScroll: 1
-  swipeDragThreshold: 2
-  swipeDragScale: 1
-  InvertSwipeXAxis: 1
-  angleDragThreshold: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_AllowActivationOnMobileDevice: 1
+  queueAhead: 1
+  useRecommendedMSAALevel: 0
+  enableAdaptiveResolution: 0
+  minRenderScale: 0.7
+  maxRenderScale: 1
+  expandMixedRealityCapturePropertySheet: 0
+  enableMixedReality: 0
+  compositionMethod: 0
+  extraHiddenLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  capturingCameraDevice: 0
+  flipCameraFrameHorizontally: 0
+  flipCameraFrameVertically: 0
+  handPoseStateLatency: 0
+  sandwichCompositionRenderLatency: 0
+  sandwichCompositionBufferedFrames: 8
+  chromaKeyColor: {r: 0, g: 1, b: 0, a: 1}
+  chromaKeySimilarity: 0.6
+  chromaKeySmoothRange: 0.03
+  chromaKeySpillRange: 0.06
+  useDynamicLighting: 0
+  depthQuality: 1
+  dynamicLightingSmoothFactor: 8
+  dynamicLightingDepthVariationClampingValue: 0.001
+  virtualGreenScreenType: 0
+  virtualGreenScreenTopY: 10
+  virtualGreenScreenBottomY: -10
+  virtualGreenScreenApplyDepthCulling: 0
+  virtualGreenScreenDepthTolerance: 0.2
+  _trackingOriginType: 0
+  usePositionTracking: 1
+  useRotationTracking: 1
+  useIPDInPositionTracking: 1
+  resetTrackerOnLoad: 1
+  AllowRecenter: 1
 --- !u!114 &552021813
 MonoBehaviour:
   m_ObjectHideFlags: 0
