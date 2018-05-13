@@ -7,42 +7,64 @@ public class MoveArmy : MonoBehaviour, UnitScript.MoveStatus
 	public WayPoint[] wayPoints;
 	public UnitScript[] units;
 	public int startWaitTime = 0;
+	public float offset = 0;
+	public Spline spline;
+	public WrapMode wrapMode = WrapMode.Clamp;
 
 	private int activeUnits;
 	private int completeMove = 0, currentPoint = 0;
 	private Coroutine onWaitCoroutine = null;
 	private TransitionLevelManager manager = null;
 
-	void Start ()
+
+	public float progress = 0;
+
+	unsafe void Start ()
 	{
 		manager = GameObject.FindObjectOfType<TransitionLevelManager> ();
+		transform.position = spline.GetPositionOnSpline (SplineMovable.WrapValue (offset, 0f, 1f, wrapMode));
 		activeUnits = units.Length;
 		foreach (UnitScript unit in units) {
 			unit.SetMoveStatusListener (this);
 			unit.SetDelta (transform.position);
+			unit.SetSpline(spline);
+			fixed (float* link = &progress){
+				unit.SetProgress (link);
+			};
+
+			fixed (float* link = &offset){
+				unit.SetOffset (link);
+			};
+
+			fixed (WrapMode* link = &wrapMode){
+				unit.SetWrapMode(link);
+			};
 		}
 		onWaitCoroutine = StartCoroutine ("Wait");
 	}
 
 	void OnDrawGizmos ()
+	{		
+		Gizmos.color = new Color (1, 0, 0, 1F);
+		Gizmos.DrawSphere (spline.GetPositionOnSpline(SplineMovable.WrapValue( offset, 0f, 1f, wrapMode )), 1f);
+	}
+
+	void FixedUpdate( ) 
 	{
-		if (wayPoints.Length < 1)
-			return;
-		
-		Gizmos.color = Color.white;
-		Vector3 lastPos = transform.position;
-		for (int i = 0; i < wayPoints.Length; i++) {
-			if (wayPoints [i].transform == null)
-				continue;
-			Gizmos.DrawLine (lastPos, wayPoints [i].transform.position);
-			lastPos = wayPoints [i].transform.position;
-		}
+		progress += Time.deltaTime;
+		spline.UpdateSplineNodes();
 	}
 
 	[ContextMenu ("Add all Units in this object")]
 	public void AddAllUnits ()
 	{
 		units = GameObject.FindObjectsOfType<UnitScript> ();
+	}
+
+	[ContextMenu ("Set army to start")]
+	public void SetToProgress ()
+	{
+		transform.position = spline.GetPositionOnSpline (SplineMovable.WrapValue (offset, 0f, 1f, wrapMode));
 	}
 
 	void UnitScript.MoveStatus.OnCompleteMove ()
@@ -70,7 +92,7 @@ public class MoveArmy : MonoBehaviour, UnitScript.MoveStatus
 		if (currentPoint < wayPoints.Length) {
 				completeMove = 0;
 				foreach (UnitScript unit in units) {
-					unit.MoveTo (wayPoints [currentPoint].transform.position);
+					unit.MoveTo (wayPoints [currentPoint].progress);
 				}
 				onWaitCoroutine = null;
 				currentPoint++;
