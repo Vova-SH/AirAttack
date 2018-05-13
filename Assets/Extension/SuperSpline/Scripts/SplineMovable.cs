@@ -8,13 +8,6 @@ public static class SplineMovable
 		transform.position = spline.GetPositionOnSpline( SplineMovable.WrapValue( passedTime, 0f, 1f, wMode ) );
 		transform.rotation = spline.GetOrientationOnSpline( SplineMovable.WrapValue( passedTime, 0f, 1f, wMode ) );
 	}
-	 
-	public static void UpdateGameObject(Transform transform, Vector3 delta, Spline spline, WrapMode wMode, float passedTime)
-	{
-		transform.position = spline.GetPositionOnSpline( SplineMovable.WrapValue( passedTime, 0f, 1f, wMode ) );
-		transform.rotation = spline.GetOrientationOnSpline( SplineMovable.WrapValue( passedTime, 0f, 1f, wMode ) );
-		transform.localPosition -= delta;
-	}
 
 	public static float WrapValue( float v, float start, float end, WrapMode wMode )
 	{

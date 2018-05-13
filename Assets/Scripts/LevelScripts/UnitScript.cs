@@ -44,8 +44,8 @@ public class UnitScript : MonoBehaviour
 	{
 		if (target > 0) {
 			var passed = ((*progress) - deltaProgress) * speed + *offset;
-			SplineMovable.UpdateGameObject (transform, delta, spline, *wrapMode, passed);
-			transform.position -= delta;
+			SplineMovable.UpdateGameObject (transform, spline, *wrapMode, passed);
+			transform.Translate( -delta);
 
 			if (target <= passed) {
 				target = -1;
