@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CursorScript : MonoBehaviour {
 
+        [SerializeField]
+        protected LayerMask blockingMask;
+
 	void Start () {
 		
 	}

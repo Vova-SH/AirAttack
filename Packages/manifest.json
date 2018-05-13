@@ -1,6 +1,8 @@
 {
   "dependencies": {
-    "com.unity.probuilder": "3.0.6",
-    "com.unity.render-pipelines.lightweight": "1.1.5-preview"
+    "com.unity.analytics": "exclude",
+    "com.unity.ads": "exclude",
+    "com.unity.standardevents": "exclude",
+    "com.unity.purchasing": "exclude"
   }
 }
