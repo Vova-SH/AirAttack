@@ -23,7 +23,10 @@ public class StarsScript : MonoBehaviour
 
 	public void loadStar ()
 	{
-		SetStar (PlayerPrefs.GetInt (levelNum.ToString (), 0));
+		if (PrefsManager.CompleteLevel >= levelNum)
+			SetStar (PrefsManager.getLevelStar (levelNum));
+		else
+			SetStar (-1);
 	}
 
 	public void saveStar (int num)
