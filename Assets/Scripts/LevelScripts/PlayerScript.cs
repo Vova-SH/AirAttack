@@ -11,9 +11,8 @@ public class PlayerScript : MonoBehaviour
 	public GameObject reloadIndicator;
 
 	[Header("Move Settings")]
-	public int speed = 10;
-	public int angularVelocity = 1;
-	public Transform[] wayPoints;
+	public Spline spline;
+	public float speed = 0.01f;
 
 	[Header("Shoot Settings")]
 	public GameObject bulletPrefab;
@@ -32,6 +31,7 @@ public class PlayerScript : MonoBehaviour
 	private int bulletCout;
 	private Image[] bullets;
 	private Vector3? point = null;
+	private float progress = 0;
 
 	void Start ()
 	{
@@ -42,34 +42,12 @@ public class PlayerScript : MonoBehaviour
 			bullets [i] = Instantiate (bulletIndicatorPrefab, bulletsIndicators.transform);
 			bullets [i].color = Color.white;
 		}
-		if(wayPoints.Length>0)
-		point = wayPoints [0].position;
 	}
 
 	void Update ()
 	{
-		if (point == null) {
-			if (pointNum < wayPoints.Length)
-				point = wayPoints [pointNum].position;
-			else
-				point = null;
-		} else {
-			transform.position += transform.forward * speed * Time.deltaTime;
-
-
-			Transform parentOvr = ovrCamera.parent;
-			ovrCamera.parent = null;
-
-			Quaternion relativePos = Quaternion.LookRotation (point.Value - transform.position);
-			Quaternion rotation = Quaternion.RotateTowards (transform.rotation, relativePos, angularVelocity * Time.deltaTime);
-			transform.rotation = rotation;
-
-			ovrCamera.parent = parentOvr;
-			if (Vector3.Distance (transform.position, point.Value) < 1) {
-				point = null;
-				pointNum++;
-			}
-		}
+		progress += Time.deltaTime;
+		transform.position = spline.GetPositionOnSpline( SplineMovable.WrapValue( progress * speed, 0f, 1f, WrapMode.Clamp ) );
 		if (isReloaded) {
 			if ((Input.GetKey (KeyCode.R) || OVRInput.Get (OVRInput.Button.DpadLeft)) && bulletCout < bulletCount) {
 				isReloaded = false;
@@ -87,37 +65,8 @@ public class PlayerScript : MonoBehaviour
 		}
 	}
 
-	[ContextMenu ("Add all Player points")]
-	public void AddAllPoints ()
-	{
-		List<GameObject> objs = new List<GameObject> ();
-		objs.AddRange (GameObject.FindGameObjectsWithTag ("Player point"));
-		wayPoints = new Transform[objs.Count];
-		for (int i = 0; i < objs.Count; i++) {
-			string name = objs [i].name;
-			name = name.Substring (name.IndexOf ("(") + 1);
-			name = name.Remove (name.Length - 1);
-			wayPoints [int.Parse (name) - 1] = objs [i].transform;
-		}
-	}
-
 	public void setShoot(bool isShooting){
 		activeShoot = isShooting;
-	}
-
-	void OnDrawGizmos ()
-	{
-		if (wayPoints.Length < 1)
-			return;
-
-		Gizmos.color = Color.green;
-		Vector3 lastPos = transform.position;
-		for (int i = 0; i < wayPoints.Length; i++) {
-			if (wayPoints [i].transform == null)
-				continue;
-			Gizmos.DrawLine (lastPos, wayPoints [i].transform.position);
-			lastPos = wayPoints [i].transform.position;
-		}
 	}
 
 	IEnumerator Reload ()
