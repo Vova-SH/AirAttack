@@ -18,7 +18,7 @@ public class SplineAnimator : MonoBehaviour
 	{
 		passedTime += Time.deltaTime * speed;
 		
-		SplineSegment segment = spline.GetSplineSegment(WrapValue( passedTime + offSet, 0f, 1f, wrapMode ));
+		//SplineSegment segment = spline.GetSplineSegment(WrapValue( passedTime + offSet, 0f, 1f, wrapMode ));
 		
 		transform.position = spline.GetPositionOnSpline( WrapValue( passedTime + offSet, 0f, 1f, wrapMode ) );
 		transform.rotation = spline.GetOrientationOnSpline( WrapValue( passedTime + offSet, 0f, 1f, wrapMode ) );

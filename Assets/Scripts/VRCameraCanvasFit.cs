@@ -15,14 +15,19 @@ public class VRCameraCanvasFit : MonoBehaviour
     private void OnEnable()
     {
         _rectTransform = GetComponent<RectTransform>();
-    }
-
-    private void Update()
-    {
         if (!_targetCamera) return;
         SetSize();
         SetPositionAndRotation();
         CalculateScale();
+    }
+
+    private void Update()
+    {
+        /*
+        if (!_targetCamera) return;
+        SetSize();
+        SetPositionAndRotation();
+        CalculateScale();*/
     }
 
     private void CalculateScale()

@@ -17,7 +17,7 @@ public class PlayerScript : MonoBehaviour
 	[Header("Shoot Settings")]
 	public GameObject bulletPrefab;
 	public float reloadShootTime = 0.1f;
-	public Transform[] shootStart;
+	public ParticleSystem[] shootStart;
 
 	[Header("Bullet Settings")]
 	public int bulletCount = 10;
@@ -49,7 +49,7 @@ public class PlayerScript : MonoBehaviour
 		progress += Time.deltaTime;
 		transform.position = spline.GetPositionOnSpline( SplineMovable.WrapValue( progress * speed, 0f, 1f, WrapMode.Clamp ) );
 		if (isReloaded) {
-			if(OVRInput.GetDown (OVRInput.Button.One)) isPressKey=true;
+			if(OVRInput.Get (OVRInput.Button.One)) isPressKey=true;
 			else if (OVRInput.GetUp (OVRInput.Button.One)) isPressKey=false;
 			if ((Input.GetKey (KeyCode.R) || OVRInput.Get (OVRInput.Button.DpadLeft)) && bulletCout < bulletCount) {
 				isReloaded = false;
@@ -61,7 +61,7 @@ public class PlayerScript : MonoBehaviour
 				bulletCout--;
 				bullets [bulletCout].color = Color.gray;
 				for (int i = 0; i < shootStart.Length; i++)
-					Instantiate (bulletPrefab.gameObject, shootStart [i].position, shootStart [i].rotation);
+					Instantiate (bulletPrefab.gameObject, shootStart [i].transform.position, shootStart [i].transform.rotation);
 				if(bulletCout==0) reloadIndicator.SetActive(true);
 			}
 		}
@@ -73,7 +73,17 @@ public class PlayerScript : MonoBehaviour
 
 	IEnumerator Reload ()
 	{
-		yield return new WaitForSeconds (reloadShootTime);
+		for (int i = 0; i < shootStart.Length; i++)
+		{
+			shootStart[i].Play();
+		}
+		yield return new WaitForSeconds (0.03f);
+		for (int i = 0; i < shootStart.Length; i++)
+		{
+			shootStart[i].Stop();
+		}
+
+		yield return new WaitForSeconds (reloadShootTime-0.03f);
 		isReloaded = true;
 	}
 

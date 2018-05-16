@@ -48,9 +48,9 @@ namespace CurvedUI {
             }        
 
             //hacky way to make sure event is connected only once, but it works!
-            EditorApplication.hierarchyWindowChanged -= AddCurvedUIComponents;
-            EditorApplication.hierarchyWindowChanged -= AddCurvedUIComponents;
-            EditorApplication.hierarchyWindowChanged += AddCurvedUIComponents;
+            EditorApplication.hierarchyChanged -= AddCurvedUIComponents;
+            EditorApplication.hierarchyChanged -= AddCurvedUIComponents;
+            EditorApplication.hierarchyChanged += AddCurvedUIComponents;
         }
 
 		#endregion 
