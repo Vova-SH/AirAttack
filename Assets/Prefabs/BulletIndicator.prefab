@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 224045539680044492}
   - component: {fileID: 222853596632139468}
   - component: {fileID: 114825557762719924}
+  - component: {fileID: 114037029272047916}
   m_Layer: 0
   m_Name: BulletIndicator
   m_TagString: Untagged
@@ -28,6 +29,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114037029272047916
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1564550304079586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e62188adca544cf1b96ccf1630f15f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DoNotTesselate: 0
+  savedPos: {x: -396, y: 0.00003863685, z: 0}
+  savedUp: {x: 0, y: 1, z: 0}
+  savedRectSize: {x: 720, y: 1440}
+  savedColor: {r: 0, g: 0, b: 0, a: 1}
+  savedTextUV0: {x: 0, y: 0}
+  savedFill: 1
 --- !u!114 &114825557762719924
 MonoBehaviour:
   m_ObjectHideFlags: 1

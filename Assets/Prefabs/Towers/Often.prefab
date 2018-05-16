@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4543600062823492}
   - component: {fileID: 33075187289530088}
   - component: {fileID: 23368947898181602}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TurretDoor1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 224069892841285690}
   - component: {fileID: 222163301207434012}
   - component: {fileID: 114157598473310896}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,12 +55,12 @@ GameObject:
   - component: {fileID: 4232796474426926}
   - component: {fileID: 33635988587304634}
   - component: {fileID: 23115294523791848}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TurretGunBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1471875471486178
 GameObject:
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4076504948287558}
   - component: {fileID: 33263036743671238}
   - component: {fileID: 23020895033098998}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TurretGunArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,12 +88,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4185462315999680}
   - component: {fileID: 95928735907978678}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MazeTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1545804001279866
 GameObject:
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 65201662126942012}
   - component: {fileID: 23611569714774866}
   - component: {fileID: 54572415464052462}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 4644354371071530}
   - component: {fileID: 33351345412322882}
   - component: {fileID: 23115908999593316}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TurretGunRotator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 4086166324341470}
   - component: {fileID: 33250455505774896}
   - component: {fileID: 23178906648597414}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TurretGunChassis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4899159324740964}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,12 +173,12 @@ GameObject:
   - component: {fileID: 4782509772245076}
   - component: {fileID: 33516017305118888}
   - component: {fileID: 23501583002797772}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TurretBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1799146432757622
 GameObject:
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 222853095375682254}
   - component: {fileID: 114361325203037290}
   - component: {fileID: 114353734328143162}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 23206013156384502}
   - component: {fileID: 198457616321617556}
   - component: {fileID: 199681737476174316}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TurretGunBarrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 4382299612178572}
   - component: {fileID: 33835999420683886}
   - component: {fileID: 23870459618432714}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TurretDoor2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 114952702371558714}
   - component: {fileID: 82382024464750252}
   - component: {fileID: 82223002394443288}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Often
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ Transform:
   - {fileID: 4445917473350110}
   m_Father: {fileID: 4076504948287558}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0.19263522, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 18, y: 18, z: 0}
 --- !u!4 &4185462315999680
 Transform:
   m_ObjectHideFlags: 1
@@ -683,7 +683,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: c1efa33fde579624c919fc3840cae588, type: 2}
+  - {fileID: 2100000, guid: 763bf70a688bd43c3adb8945fb2a833f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
