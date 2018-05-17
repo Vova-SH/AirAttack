@@ -99,7 +99,7 @@ public class UnitScript : MonoBehaviour
 			for (int i = 0; i < towers.Count; i++) {
 				towers [i].DestroyUnit (this);
 			}
-			death.Play ();
+			if(death!=null) death.Play ();
 			Destroy (gameObject);
 			if (callback != null)
 				callback.OnDestroy ();

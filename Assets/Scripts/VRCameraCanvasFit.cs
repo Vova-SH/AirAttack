@@ -15,19 +15,14 @@ public class VRCameraCanvasFit : MonoBehaviour
     private void OnEnable()
     {
         _rectTransform = GetComponent<RectTransform>();
-        if (!_targetCamera) return;
-        SetSize();
-        SetPositionAndRotation();
-        CalculateScale();
     }
 
     private void Update()
     {
-        /*
         if (!_targetCamera) return;
         SetSize();
         SetPositionAndRotation();
-        CalculateScale();*/
+        CalculateScale();
     }
 
     private void CalculateScale()
@@ -50,7 +45,7 @@ public class VRCameraCanvasFit : MonoBehaviour
     {
         Transform cameraTransform = _targetCamera.transform;
         _rectTransform.position = cameraTransform.position + cameraTransform.forward.normalized * _distance;
-        _rectTransform.rotation = cameraTransform.rotation;
+        //_rectTransform.rotation = cameraTransform.rotation;
     }
 
     private void SetSize()
