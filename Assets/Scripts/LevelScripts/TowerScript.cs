@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TowerScript : MonoBehaviour
 {
 	[Header("Gun Settings")]
-	public GameObject gun;
+	public Transform head, gun;
 	public Transform shootStart;
 	public AudioSource shootAudio;
 	public ParticleSystem particleGun;
@@ -60,31 +60,53 @@ public class TowerScript : MonoBehaviour
 
 	void Update ()
 	{
-		float angle;
 		var rotate = angularVelocity * Time.deltaTime;
 		if (units.Count != 0 && health > 0) {
-			Vector3 target = units [units.Count - 1].transform.position - gun.transform.position;
+			//RotateOY(units [units.Count - 1].transform.position, rotate);
+			//RotateOX(units [units.Count - 1].transform.position, rotate);
+
+			
+			Vector3 target = units [0].transform.position - gun.transform.position;
 			target.y = gun.transform.forward.y;
-			angle = Vector3.SignedAngle (target, gun.transform.forward, Vector3.up);
+			float angle = Vector3.SignedAngle (target, gun.transform.forward, Vector3.up);
 			if (Mathf.Abs (angle) > rotate) {
 				var vector = angle < 0 ? Vector3.up : -Vector3.up;
 				gun.transform.Rotate (vector, rotate, Space.Self);
 			}
-			/*
-			var lookPos = units [units.Count - 1].transform.position - gun.transform.position;
-			lookPos.y = 0;
-			var rotation = Quaternion.LookRotation (lookPos);
-			gun.transform.rotation = Quaternion.Slerp (gun.transform.rotation, rotation, Time.deltaTime * angularVelocity);*/
 		} else {
-			angle = gun.transform.rotation.eulerAngles.y % 360;
+			float angle = gun.rotation.eulerAngles.y % 360;
 			if (Mathf.Abs (angle) > rotate) {
 				var vector = angle > 0 && angle < 180 ? -Vector3.up : Vector3.up;
-				gun.transform.Rotate (vector, angularVelocity * Time.deltaTime, Space.Self);
+				gun.Rotate (vector, angularVelocity * Time.deltaTime, Space.Self);
 			} else if (health <= 0) {
-				gun.transform.rotation = Quaternion.identity;
+				gun.rotation = Quaternion.identity;
 				gunAnimator.Play (disableGun);
 			}
 		}
+	}
+
+	void RotateOY(Vector3 target, float rotate)
+	{
+		if(gun==null) return;
+		Vector3 toTarget = target - gun.position;
+			toTarget.y = gun.forward.y;
+			float angle = Vector3.SignedAngle (target, gun.forward, Vector3.up);
+			if (Mathf.Abs (angle) > rotate) {
+				var vector = angle < 0 ? Vector3.up : -Vector3.up;
+				gun.Rotate (vector, rotate, Space.Self);
+			}
+	}
+	void RotateOX(Vector3 target, float rotate)
+	{
+		if(head==null) return;
+		Vector3 toTarget = target - head.position;
+			toTarget.x = head.forward.x;
+			float angle = Vector3.SignedAngle (target, head.forward, Vector3.left);
+			if (Mathf.Abs (angle) > rotate) {
+				var vector = angle < 0 ? Vector3.left : -Vector3.left;
+				head.Rotate (vector, rotate, Space.Self);
+			}
+
 	}
 
 	public void DestroyUnit (UnitScript unit)
@@ -124,7 +146,7 @@ public class TowerScript : MonoBehaviour
 			shootAudio.Play ();
 			if (units.Count > 0 && health > 0) {
 				GameObject go = Instantiate (bullet.gameObject, shootStart.position, Quaternion.identity) as GameObject;
-				go.GetComponent<BulletScript> ().Target = units [units.Count - 1];
+				go.GetComponent<BulletScript> ().Target = units [0];
 			}
 			yield return new WaitForSeconds (0.1f);
 			particleGun.Stop ();
