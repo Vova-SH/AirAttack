@@ -12,7 +12,7 @@ public class UnitScript : MonoBehaviour
 	public float speed = 5;
 
 	[Header("UI Indicator")]
-	public Canvas layerForIndicator;
+	public RectTransform layerForIndicator;
 	public UnitPosition indicator;
 	public Color colorIndicator;
 
