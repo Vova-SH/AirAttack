@@ -2499,7 +2499,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1995186132}
+      - m_Target: {fileID: 887206249}
+        m_MethodName: SetPositionY
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 301651514}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 749612845}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -2510,12 +2521,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 887206249}
-        m_MethodName: SetPositionY
-        m_Mode: 2
+      - m_Target: {fileID: 1866126056}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
-          m_ObjectArgument: {fileID: 301651514}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3685,8 +3696,8 @@ RectTransform:
   m_Father: {fileID: 1417131933}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.35, y: 0.2}
-  m_AnchorMax: {x: 0.65, y: 0.25}
+  m_AnchorMin: {x: 0.35, y: 0.22}
+  m_AnchorMax: {x: 0.65, y: 0.27}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3716,7 +3727,7 @@ MonoBehaviour:
   DoNotTesselate: 0
   savedPos: {x: -0.000030517578, y: 0.00003863685, z: 0}
   savedUp: {x: 0, y: 1, z: 0}
-  savedRectSize: {x: 431.99994, y: 72}
+  savedRectSize: {x: 431.99994, y: 72.00003}
   savedColor: {r: 0, g: 0, b: 0, a: 0.147}
   savedTextUV0: {x: 0, y: 0}
   savedFill: 1
@@ -15614,7 +15625,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1df7a281cccab497281d46aa9e03969e, type: 3}
-    m_FontSize: 80
+    m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -15664,7 +15675,7 @@ MonoBehaviour:
   DoNotTesselate: 1
   savedPos: {x: 0.000030517578, y: 216.00026, z: 0}
   savedUp: {x: 0, y: 1, z: 0}
-  savedRectSize: {x: 495.35995, y: 144.00006}
+  savedRectSize: {x: 495.35995, y: 187.20001}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
   savedTextUV0: {x: 0, y: 0.0078125}
   savedFill: 0
@@ -28214,7 +28225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1866126057
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28231,7 +28242,7 @@ RectTransform:
   m_Father: {fileID: 1417131933}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.07, y: 0.65}
+  m_AnchorMin: {x: 0.07, y: 0.62}
   m_AnchorMax: {x: 0.93, y: 0.75}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
