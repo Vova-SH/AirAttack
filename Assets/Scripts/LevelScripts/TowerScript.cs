@@ -120,7 +120,7 @@ public class TowerScript : MonoBehaviour
 		health -= damage;
 		progressBar.fillAmount = health * multiplyProgress;
 		if (cur > 0 && health < 1) {
-			progressBar.gameObject.SetActive (false);
+			progressBar.transform.parent.gameObject.SetActive (false);
 			deathAudio.Play ();
 		}
 		//change skin or add particle
@@ -148,8 +148,6 @@ public class TowerScript : MonoBehaviour
 				GameObject go = Instantiate (bullet.gameObject, shootStart.position, Quaternion.identity) as GameObject;
 				go.GetComponent<BulletScript> ().Target = units [0];
 			}
-			yield return new WaitForSeconds (0.1f);
-			particleGun.Stop ();
 		}
 	}
 
