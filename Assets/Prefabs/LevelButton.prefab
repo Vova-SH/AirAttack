@@ -152,7 +152,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5719cbec9fe0920409490cfe0519bfbf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b65443c0ff9f4e4ab70e092d1cbe123, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e308d061dbc254d8b3a66b5805ef17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelNum: 0
+  levelNum: 1
   enableSprite: {fileID: 21300000, guid: 219de8be87cca4f5a9190fad4b3741d4, type: 3}
   disableSprite: {fileID: 21300000, guid: 5b17dad8daffc40339384cf0f37388cc, type: 3}
   stars:
@@ -377,11 +377,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c45a825599da074fbbef41595e3cef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelNum: 0
+  levelNum: 1
   textView: {fileID: 0}
   imageView: {fileID: 114039184492115862}
   disableColor: {r: 1, g: 0.41037738, b: 0.41037738, a: 1}
-  selectedSprite: {fileID: 21300000, guid: abd5d89f462ddc1409a455f47e05aed8, type: 3}
+  selectedSprite: {fileID: 21300000, guid: 18b87621c6629b841a4f7b83d3c2b3ff, type: 3}
   onSelectText: Coming soon
   transition: {fileID: 0}
 --- !u!222 &222201117183023882
