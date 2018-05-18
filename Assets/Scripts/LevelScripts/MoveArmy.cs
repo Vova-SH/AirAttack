@@ -92,6 +92,7 @@ public class MoveArmy : MonoBehaviour, UnitScript.MoveStatus
 		if (currentPoint < wayPoints.Length) {
 				completeMove = 0;
 				foreach (UnitScript unit in units) {
+					if(unit!=null)
 					unit.MoveTo (wayPoints [currentPoint].progress);
 				}
 				onWaitCoroutine = null;

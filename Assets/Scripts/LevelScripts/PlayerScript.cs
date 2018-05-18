@@ -76,14 +76,14 @@ public class PlayerScript : MonoBehaviour
 		for (int i = 0; i < shootStart.Length; i++)
 		{
 			shootStart[i].Play();
-		}
+		}/*
 		yield return new WaitForSeconds (0.03f);
 		for (int i = 0; i < shootStart.Length; i++)
 		{
 			shootStart[i].Stop();
-		}
+		}*/
 
-		yield return new WaitForSeconds (reloadShootTime-0.03f);
+		yield return new WaitForSeconds (reloadShootTime);
 		isReloaded = true;
 	}
 
