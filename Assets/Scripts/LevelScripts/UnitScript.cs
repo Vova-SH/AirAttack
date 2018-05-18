@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UnitScript : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class UnitScript : MonoBehaviour
 	public int health = 100;
 	public int armor = 0;
 	public float speed = 5;
+
+	[Header("UI Indicator")]
+	public Canvas layerForIndicator;
+	public UnitPosition indicator;
+	public Color colorIndicator;
 
 	private float target = -1;
 	private Vector3 delta;
@@ -21,6 +27,9 @@ public class UnitScript : MonoBehaviour
 
 	void Start ()
 	{
+		indicator.GetComponent<Image> ().color = colorIndicator;
+		indicator.watchUnit = gameObject;
+		GameObject.Instantiate(indicator, layerForIndicator.transform.position, Quaternion.identity, layerForIndicator.transform);
 		//TODO: add trigger, when shoot collide
 	}
 
