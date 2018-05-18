@@ -17,6 +17,6 @@ public class TransitionManagerMenu : MonoBehaviour {
 
 	public void LoadScenes(int levelNum)
 	{
-		SceneManager.LoadSceneAsync ("Level"+levelNum);
+		SceneManager.LoadSceneAsync (levelNum);
 	}
 }
