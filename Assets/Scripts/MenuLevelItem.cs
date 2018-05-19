@@ -38,8 +38,8 @@ public class MenuLevelItem : MonoBehaviour
 			});
 
 			EventTrigger.Entry pointerClick = new EventTrigger.Entry ();
-			pointerExit.eventID = EventTriggerType.PointerClick;
-			pointerExit.callback.AddListener ((eventData) => {
+			pointerClick.eventID = EventTriggerType.PointerClick;
+			pointerClick.callback.AddListener ((eventData) => {
 				transition.LoadScenes(levelNum);
 			});
 			eventTrigger.triggers.Add (pointerEnter);
