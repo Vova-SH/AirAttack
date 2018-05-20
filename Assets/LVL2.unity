@@ -689,7 +689,7 @@ RectTransform:
   m_GameObject: {fileID: 76555801}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2}
-  m_LocalScale: {x: 0.0073394496, y: 0.0073394496, z: 0.0073394496}
+  m_LocalScale: {x: 0.0073394477, y: 0.0073394477, z: 0.0073394477}
   m_Children:
   - {fileID: 1261878529}
   - {fileID: 636799188}
@@ -12080,7 +12080,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 495.35995, y: 187.20001}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
-  savedTextUV0: {x: 0.0078125, y: 0}
+  savedTextUV0: {x: 0, y: 0.00390625}
   savedFill: 0
 --- !u!95 &371009757
 Animator:
@@ -19691,7 +19691,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 896954694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.139137, y: 14.236166, z: -85.60517}
+  m_LocalPosition: {x: -32.4, y: 1, z: -74.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1015808915}
