@@ -2973,7 +2973,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1, y: 0.2}
   m_AnchorMax: {x: 0.9, y: 0.9}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -735}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &426029914
@@ -8637,7 +8637,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 669018886}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.064, z: -2}
+  m_LocalPosition: {x: -0.17, y: 0.08, z: -2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 381055302}
@@ -8968,8 +8968,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2048, y: 320}
+  m_AnchoredPosition: {x: 0, y: 534}
+  m_SizeDelta: {x: 3333, y: 1874}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &768122849
 MonoBehaviour:
@@ -9003,11 +9003,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: e006dcad17f684791a1cd669db1ff6e0, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 3
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -9921,31 +9921,6 @@ MonoBehaviour:
   enableAdaptiveResolution: 0
   minRenderScale: 0.7
   maxRenderScale: 1
-  expandMixedRealityCapturePropertySheet: 0
-  enableMixedReality: 0
-  compositionMethod: 0
-  extraHiddenLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  capturingCameraDevice: 0
-  flipCameraFrameHorizontally: 0
-  flipCameraFrameVertically: 0
-  handPoseStateLatency: 0
-  sandwichCompositionRenderLatency: 0
-  sandwichCompositionBufferedFrames: 8
-  chromaKeyColor: {r: 0, g: 1, b: 0, a: 1}
-  chromaKeySimilarity: 0.6
-  chromaKeySmoothRange: 0.03
-  chromaKeySpillRange: 0.06
-  useDynamicLighting: 0
-  depthQuality: 1
-  dynamicLightingSmoothFactor: 8
-  dynamicLightingDepthVariationClampingValue: 0.001
-  virtualGreenScreenType: 0
-  virtualGreenScreenTopY: 10
-  virtualGreenScreenBottomY: -10
-  virtualGreenScreenApplyDepthCulling: 0
-  virtualGreenScreenDepthTolerance: 0.2
   _trackingOriginType: 0
   usePositionTracking: 1
   useRotationTracking: 1
@@ -10833,14 +10808,14 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 144
+    m_Font: {fileID: 12800000, guid: 1df7a281cccab497281d46aa9e03969e, type: 3}
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 288
     m_Alignment: 1
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -15139,6 +15114,16 @@ Prefab:
       propertyPath: transition
       value: 
       objectReference: {fileID: 934866250}
+    - target: {fileID: 114978205733215186, guid: 359d4ee34ead9c74bb75224517239e68,
+        type: 2}
+      propertyPath: onSelectText
+      value: "\u041E\u0442\u0440\u044F\u0434 \u0422\u0440\u043E\u043F\u0438\u0447\u0435\u0441\u043A\u043E\u0433\u043E
+        \u043B\u0435\u0441\u0430 \u043D\u0443\u0436\u0434\u0430\u0435\u0442\u0441\u044F
+        \u0432 \u0442\u0432\u043E\u0435\u0439 \u043F\u043E\u043C\u043E\u0449\u0438!
+        \u041E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u0439\u0441\u044F \u043D\u0430
+        \u0437\u0430\u0434\u0430\u043D\u0438\u0435, \u0441\u0438\u043D\u0438\u0438
+        \u043F\u0443\u0448\u043A\u0438 \u043E\u0447\u0435\u043D\u044C \u043A\u043E\u0432\u0430\u0440\u043D\u044B!"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 359d4ee34ead9c74bb75224517239e68, type: 2}
   m_IsPrefabParent: 0
@@ -15308,7 +15293,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.8
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -15395,6 +15380,101 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   sortOrder: 20
+--- !u!82 &1843275630
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1843275625}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 93a3cc89e80ab466a956cca461011aef, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &1843275632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17327,6 +17407,17 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: -50.48908
+      objectReference: {fileID: 0}
+    - target: {fileID: 114978205733215186, guid: 359d4ee34ead9c74bb75224517239e68,
+        type: 2}
+      propertyPath: onSelectText
+      value: "\u041C\u0438\u0440 \u0414\u0438\u043A\u043E\u0433\u043E \u0417\u0430\u043F\u0430\u0434\u0430
+        \u0436\u0434\u0451\u0442 \u0442\u0435\u0431\u044F! \u041F\u043E\u043C\u043E\u0433\u0438
+        \u0430\u0440\u043C\u0438\u0438 \u0414\u0440\u043E\u043D\u043E\u0432 \u0434\u043E\u0431\u0440\u0430\u0442\u044C\u0441\u044F
+        \u0434\u043E \u0443\u043A\u0440\u044B\u0442\u0438\u044F! \u0411\u0443\u0434\u044C
+        \u043E\u0441\u0442\u043E\u0440\u043E\u0436\u0435\u043D, \u043F\u043E\u0432\u0441\u044E\u0434\u0443
+        \u0440\u0430\u0441\u0441\u0442\u0430\u0432\u043B\u0435\u043D\u043E \u043C\u043D\u043E\u0436\u0435\u0441\u0442\u0432\u043E
+        \u043E\u043F\u0430\u0441\u043D\u044B\u0445 \u043F\u0443\u0448\u0435\u043A!"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 359d4ee34ead9c74bb75224517239e68, type: 2}

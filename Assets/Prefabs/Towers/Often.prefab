@@ -1136,7 +1136,7 @@ MonoBehaviour:
   head: {fileID: 4076504948287558}
   gun: {fileID: 4899159324740964}
   shootStart: {fileID: 4445917473350110}
-  shootAudio: {fileID: 82382024464750252}
+  shootAudio: {fileID: 0}
   particleGun: {fileID: 198457616321617556}
   gunAnimator: {fileID: 95928735907978678}
   disableGun: MazeTurretPowerDown
