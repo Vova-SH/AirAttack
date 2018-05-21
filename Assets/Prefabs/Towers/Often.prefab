@@ -1141,12 +1141,12 @@ MonoBehaviour:
   gunAnimator: {fileID: 95928735907978678}
   disableGun: MazeTurretPowerDown
   angularVelocity: 100
-  health: 30
+  health: 8
   deathAudio: {fileID: 82223002394443288}
   progressBar: {fileID: 114157598473310896}
   bullet: {fileID: 114360458045000092, guid: 89f54ac325e41714d91a82b229eb4e37, type: 2}
   radius: 15
-  timeoutSeconds: 1.5
+  timeoutSeconds: 1
 --- !u!198 &198457616321617556
 ParticleSystem:
   m_ObjectHideFlags: 1
