@@ -21,8 +21,8 @@ public class TransitionLevelManager : MonoBehaviour {
 			hight--;
 		}
 		hight++;
-		starScript.SetStar (hight);
-		starScript.saveStar(hight);
+		starScript.SetStar (hight+1);
+		starScript.saveStar(hight+1);
 		if(PrefsManager.CompleteLevel < starScript.levelNum+1) PrefsManager.CompleteLevel=starScript.levelNum+1;
 		onComplete.Invoke ();
 	}

@@ -2535,6 +2535,11 @@ Prefab:
       propertyPath: layerForIndicator
       value: 
       objectReference: {fileID: 470908787}
+    - target: {fileID: 114117281906690936, guid: 47fba05e24b4af041ba33025c5c15fba,
+        type: 2}
+      propertyPath: speed
+      value: 0.026
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47fba05e24b4af041ba33025c5c15fba, type: 2}
   m_IsPrefabParent: 0
@@ -2605,6 +2610,11 @@ Prefab:
       propertyPath: layerForIndicator
       value: 
       objectReference: {fileID: 470908787}
+    - target: {fileID: 114117281906690936, guid: 47fba05e24b4af041ba33025c5c15fba,
+        type: 2}
+      propertyPath: speed
+      value: 0.026
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47fba05e24b4af041ba33025c5c15fba, type: 2}
   m_IsPrefabParent: 0
@@ -3058,6 +3068,11 @@ Prefab:
       propertyPath: layerForIndicator
       value: 
       objectReference: {fileID: 470908787}
+    - target: {fileID: 114117281906690936, guid: 47fba05e24b4af041ba33025c5c15fba,
+        type: 2}
+      propertyPath: speed
+      value: 0.026
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47fba05e24b4af041ba33025c5c15fba, type: 2}
   m_IsPrefabParent: 0
@@ -17304,6 +17319,11 @@ Prefab:
       propertyPath: layerForIndicator
       value: 
       objectReference: {fileID: 470908787}
+    - target: {fileID: 114117281906690936, guid: 47fba05e24b4af041ba33025c5c15fba,
+        type: 2}
+      propertyPath: speed
+      value: 0.026
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47fba05e24b4af041ba33025c5c15fba, type: 2}
   m_IsPrefabParent: 0
@@ -19025,7 +19045,7 @@ RectTransform:
   m_GameObject: {fileID: 1363752459}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2}
-  m_LocalScale: {x: 0.0022222225, y: 0.0022222225, z: 0.0022222225}
+  m_LocalScale: {x: 0.0022222234, y: 0.0022222234, z: 0.0022222234}
   m_Children:
   - {fileID: 2036061252}
   - {fileID: 582951966}
@@ -33700,6 +33720,11 @@ Prefab:
       propertyPath: layerForIndicator
       value: 
       objectReference: {fileID: 470908787}
+    - target: {fileID: 114117281906690936, guid: 47fba05e24b4af041ba33025c5c15fba,
+        type: 2}
+      propertyPath: speed
+      value: 0.026
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47fba05e24b4af041ba33025c5c15fba, type: 2}
   m_IsPrefabParent: 0
