@@ -28,8 +28,6 @@ public class PlayerScript : MonoBehaviour
 
 	private bool isReloaded = true, activeShoot = true;
 	private int bulletCout;
-
-	private bool isPressKey = false;
 	private Image[] bullets;
 	private float progress = 0;
 
@@ -49,12 +47,10 @@ public class PlayerScript : MonoBehaviour
 		progress += Time.deltaTime;
 		transform.position = spline.GetPositionOnSpline( SplineMovable.WrapValue( progress * speed, 0f, 1f, WrapMode.Clamp ) );
 		if (isReloaded) {
-			if(OVRInput.Get (OVRInput.Button.One)) isPressKey=true;
-			else if (OVRInput.GetUp (OVRInput.Button.One)) isPressKey=false;
 			if ((Input.GetKey (KeyCode.R) || OVRInput.Get (OVRInput.Button.DpadLeft)) && bulletCout < bulletCount) {
 				isReloaded = false;
 				StartCoroutine (ReloadBow ());
-			} else if ((Input.GetMouseButtonDown (0) || isPressKey) && activeShoot && bulletCout > 0) {
+			} else if ((Input.GetMouseButtonDown (0) || OVRInput.Get (OVRInput.Touch.One)) && activeShoot && bulletCout > 0) {
 				isReloaded = false;
 				StartCoroutine (Reload ());
 				GetComponent<AudioSource> ().Play ();
