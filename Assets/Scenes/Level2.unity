@@ -12141,7 +12141,7 @@ Prefab:
         type: 2}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1508741019}
     - target: {fileID: 114552679799444028, guid: 9bf19e9778a63f64fb076d68b1b961ac,
         type: 2}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -19025,7 +19025,7 @@ RectTransform:
   m_GameObject: {fileID: 1363752459}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2}
-  m_LocalScale: {x: 0.002222221, y: 0.002222221, z: 0.002222221}
+  m_LocalScale: {x: 0.0022222225, y: 0.0022222225, z: 0.0022222225}
   m_Children:
   - {fileID: 2036061252}
   - {fileID: 582951966}
@@ -27348,7 +27348,7 @@ Prefab:
         type: 2}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1508741019}
     - target: {fileID: 114552679799444028, guid: 9bf19e9778a63f64fb076d68b1b961ac,
         type: 2}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
