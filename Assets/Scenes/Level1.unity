@@ -1714,6 +1714,11 @@ Prefab:
       propertyPath: layerForIndicator
       value: 
       objectReference: {fileID: 1104048171}
+    - target: {fileID: 114117281906690936, guid: 47fba05e24b4af041ba33025c5c15fba,
+        type: 2}
+      propertyPath: speed
+      value: 0.027
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47fba05e24b4af041ba33025c5c15fba, type: 2}
   m_IsPrefabParent: 0
@@ -1765,6 +1770,11 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d0c31a39c426da94496d2abbf928d525, type: 2}
+    - target: {fileID: 114952702371558714, guid: eaedbf3e54f20c3409975579d769b949,
+        type: 2}
+      propertyPath: health
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eaedbf3e54f20c3409975579d769b949, type: 2}
   m_IsPrefabParent: 0
@@ -4904,6 +4914,11 @@ Prefab:
       propertyPath: layerForIndicator
       value: 
       objectReference: {fileID: 1104048171}
+    - target: {fileID: 114117281906690936, guid: 47fba05e24b4af041ba33025c5c15fba,
+        type: 2}
+      propertyPath: speed
+      value: 0.027
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47fba05e24b4af041ba33025c5c15fba, type: 2}
   m_IsPrefabParent: 0
@@ -16155,6 +16170,11 @@ Prefab:
       propertyPath: layerForIndicator
       value: 
       objectReference: {fileID: 1104048171}
+    - target: {fileID: 114117281906690936, guid: 47fba05e24b4af041ba33025c5c15fba,
+        type: 2}
+      propertyPath: speed
+      value: 0.027
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47fba05e24b4af041ba33025c5c15fba, type: 2}
   m_IsPrefabParent: 0
@@ -17567,6 +17587,11 @@ Prefab:
     - target: {fileID: 1947176512199480, guid: eaedbf3e54f20c3409975579d769b949, type: 2}
       propertyPath: m_Name
       value: Base 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114952702371558714, guid: eaedbf3e54f20c3409975579d769b949,
+        type: 2}
+      propertyPath: health
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eaedbf3e54f20c3409975579d769b949, type: 2}
@@ -23480,6 +23505,11 @@ Prefab:
       propertyPath: layerForIndicator
       value: 
       objectReference: {fileID: 1104048171}
+    - target: {fileID: 114117281906690936, guid: 47fba05e24b4af041ba33025c5c15fba,
+        type: 2}
+      propertyPath: speed
+      value: 0.027
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47fba05e24b4af041ba33025c5c15fba, type: 2}
   m_IsPrefabParent: 0
@@ -23676,6 +23706,11 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d0c31a39c426da94496d2abbf928d525, type: 2}
+    - target: {fileID: 114952702371558714, guid: eaedbf3e54f20c3409975579d769b949,
+        type: 2}
+      propertyPath: health
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eaedbf3e54f20c3409975579d769b949, type: 2}
   m_IsPrefabParent: 0
@@ -30353,6 +30388,11 @@ Prefab:
       propertyPath: layerForIndicator
       value: 
       objectReference: {fileID: 1104048171}
+    - target: {fileID: 114117281906690936, guid: 47fba05e24b4af041ba33025c5c15fba,
+        type: 2}
+      propertyPath: speed
+      value: 0.027
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47fba05e24b4af041ba33025c5c15fba, type: 2}
   m_IsPrefabParent: 0
@@ -30404,6 +30444,11 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d0c31a39c426da94496d2abbf928d525, type: 2}
+    - target: {fileID: 114952702371558714, guid: eaedbf3e54f20c3409975579d769b949,
+        type: 2}
+      propertyPath: health
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eaedbf3e54f20c3409975579d769b949, type: 2}
   m_IsPrefabParent: 0
