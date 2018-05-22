@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 23206013156384502}
   - component: {fileID: 198457616321617556}
   - component: {fileID: 199681737476174316}
+  - component: {fileID: 82802453777608252}
   m_Layer: 0
   m_Name: TurretGunBarrel
   m_TagString: Untagged
@@ -245,7 +246,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4356882581043224}
   - component: {fileID: 114952702371558714}
-  - component: {fileID: 82382024464750252}
   - component: {fileID: 82223002394443288}
   m_Layer: 0
   m_Name: Often
@@ -923,16 +923,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!82 &82382024464750252
+--- !u!82 &82802453777608252
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1947176512199480}
+  m_GameObject: {fileID: 1873446265573742}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fb495fc0241519b4891e5c6ea25c4cc5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5d5d834a8da04244fa681d341658ca0a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1136,7 +1136,7 @@ MonoBehaviour:
   head: {fileID: 4076504948287558}
   gun: {fileID: 4899159324740964}
   shootStart: {fileID: 4445917473350110}
-  shootAudio: {fileID: 0}
+  shootAudio: {fileID: 82802453777608252}
   particleGun: {fileID: 198457616321617556}
   gunAnimator: {fileID: 95928735907978678}
   disableGun: MazeTurretPowerDown

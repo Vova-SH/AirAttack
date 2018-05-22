@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Level2.unity
     guid: 66ed11cc3f2f845aa85b4dcb778490ee
   - enabled: 1
-    path: Assets/Extension/CurvedUI/Demo Scenes/13 OculusVR Starter.unity
-    guid: dc119db224c293b4696571d89342a5f5
+    path: Assets/Scenes/Level3.unity
+    guid: 97b3626a8b9ac44c88f922cc5c10b8b4
   m_configObjects: {}
