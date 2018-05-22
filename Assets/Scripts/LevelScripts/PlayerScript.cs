@@ -17,11 +17,13 @@ public class PlayerScript : MonoBehaviour
 	[Header("Shoot Settings")]
 	public GameObject bulletPrefab;
 	public float reloadShootTime = 0.1f;
+	public AudioSource shootSound;
 	public ParticleSystem[] shootStart;
 
 	[Header("Bullet Settings")]
 	public int bulletCount = 10;
 	public float reloadBulletTime = 2.0f;
+	public AudioSource reloadSound;
 
 	[Header("Other Initialize")]
 	public Transform ovrCamera;
@@ -49,11 +51,12 @@ public class PlayerScript : MonoBehaviour
 		if (isReloaded) {
 			if ((Input.GetKey (KeyCode.R) || OVRInput.Get (OVRInput.Button.DpadLeft)) && bulletCout < bulletCount) {
 				isReloaded = false;
+				reloadSound.Play ();
 				StartCoroutine (ReloadBow ());
 			} else if ((Input.GetMouseButtonDown (0) || OVRInput.Get (OVRInput.Touch.One)) && activeShoot && bulletCout > 0) {
 				isReloaded = false;
 				StartCoroutine (Reload ());
-				GetComponent<AudioSource> ().Play ();
+				shootSound.Play ();
 				bulletCout--;
 				bullets [bulletCout].color = Color.gray;
 				for (int i = 0; i < shootStart.Length; i++)
