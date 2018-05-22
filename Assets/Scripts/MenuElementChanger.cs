@@ -20,13 +20,13 @@ public class MenuElementChanger : MonoBehaviour
 			eventTrigger = gameObject.AddComponent<EventTrigger> ();
 		EventTrigger.Entry pointerClick = new EventTrigger.Entry ();
 		pointerClick.eventID = EventTriggerType.PointerClick;
-		pointerClick.callback.AddListener ((eventData) => { 
-			foreach (MenuElementChanger item in onActivateItems) {
-				item.enable ();
-			}
+		pointerClick.callback.AddListener ((eventData) => {
 			GameObject.Find ("System").GetComponent<TransitionManagerMenu> ()
 				.changePosition (GetComponent<MenuElementChanger> ());
 			onDisable.Invoke ();
+			foreach (MenuElementChanger item in onActivateItems) {
+				item.enable ();
+			}
 		});
 		eventTrigger.triggers.Add (pointerClick);
 	}

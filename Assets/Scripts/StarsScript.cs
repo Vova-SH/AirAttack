@@ -17,7 +17,7 @@ public class StarsScript : MonoBehaviour
 	public void SetStar (int num)
 	{
 		for (int i = 0; i < stars.Length; i++) {
-			stars [i].sprite = i <= num ? enableSprite : disableSprite;
+			stars [i].sprite = i < num ? enableSprite : disableSprite;
 		}
 	}
 
@@ -26,12 +26,12 @@ public class StarsScript : MonoBehaviour
 		if (PrefsManager.CompleteLevel >= levelNum)
 			SetStar (PrefsManager.getLevelStar (levelNum));
 		else
-			SetStar (-1);
+			SetStar (0);
 	}
 
 	public void saveStar (int num)
 	{
 		if(PlayerPrefs.GetInt (levelNum.ToString (), 0) < num)
-		PlayerPrefs.SetInt (levelNum.ToString (), num);
+		PlayerPrefs.SetInt (levelNum.ToString (), num+1);
 	}
 }
