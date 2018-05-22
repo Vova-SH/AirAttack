@@ -13197,7 +13197,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 1df7a281cccab497281d46aa9e03969e, type: 3}
     m_FontSize: 92
     m_FontStyle: 0
     m_BestFit: 1
@@ -15336,6 +15336,15 @@ Prefab:
       propertyPath: transition
       value: 
       objectReference: {fileID: 934866250}
+    - target: {fileID: 114978205733215186, guid: 359d4ee34ead9c74bb75224517239e68,
+        type: 2}
+      propertyPath: onSelectText
+      value: "\u0416\u0430\u0440\u043A\u0438\u0435 \u043F\u0435\u0441\u043A\u0438
+        \u0436\u0434\u0443\u0442 \u0442\u0435\u0431\u044F - \u0414\u0432\u043E\u0440\u0435\u0446
+        \u0431\u0435\u043B\u043E\u0433\u043E \u043E\u0437\u0435\u0440\u0430 \u043D\u0430\u0445\u043E\u0434\u0438\u0442\u0441\u044F
+        \u043F\u043E\u0434 \u043E\u0441\u0430\u0434\u043E\u0439, \u041D\u0423\u0416\u041D\u0410
+        \u041F\u041E\u0414\u0414\u0415\u0420\u0416\u041A\u0410 \u0421 \u0412\u041E\u0417\u0414\u0423\u0425\u0410!"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 359d4ee34ead9c74bb75224517239e68, type: 2}
   m_IsPrefabParent: 0
@@ -15737,7 +15746,7 @@ Prefab:
         \u043B\u0435\u0441\u0430 \u043D\u0443\u0436\u0434\u0430\u0435\u0442\u0441\u044F
         \u0432 \u0442\u0432\u043E\u0435\u0439 \u043F\u043E\u043C\u043E\u0449\u0438!
         \u041E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u0439\u0441\u044F \u043D\u0430
-        \u0437\u0430\u0434\u0430\u043D\u0438\u0435, \u0441\u0438\u043D\u0438\u0438
+        \u0437\u0430\u0434\u0430\u043D\u0438\u0435, \u0441\u0438\u043D\u0438\u0435
         \u043F\u0443\u0448\u043A\u0438 \u043E\u0447\u0435\u043D\u044C \u043A\u043E\u0432\u0430\u0440\u043D\u044B!"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
