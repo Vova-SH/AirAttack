@@ -202,9 +202,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: -396.00046, y: 0.00032586674, z: 0.00087219244}
+  savedPos: {x: -159.77516, y: -0.00007745216, z: -0.0000685167}
   savedUp: {x: 0, y: 1, z: 0}
-  savedRectSize: {x: 720, y: 1440}
+  savedRectSize: {x: 290.5, y: 436}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
   savedTextUV0: {x: 0, y: 0}
   savedFill: 1
@@ -1151,6 +1151,8 @@ Transform:
   - {fileID: 1336120233}
   - {fileID: 138620987}
   - {fileID: 2073818828}
+  - {fileID: 1930199943}
+  - {fileID: 812984398}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3585,7 +3587,7 @@ MonoBehaviour:
   DoNotTesselate: 0
   savedPos: {x: -0.000030517578, y: 720.00006, z: 0}
   savedUp: {x: 0, y: 1, z: 0}
-  savedRectSize: {x: 431.99994, y: 20}
+  savedRectSize: {x: 174.3, y: 20}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
   savedTextUV0: {x: 0, y: 0}
   savedFill: 1
@@ -3981,7 +3983,7 @@ MonoBehaviour:
   DoNotTesselate: 0
   savedPos: {x: -0.000030517578, y: 0.00003863685, z: 0}
   savedUp: {x: 0, y: 1, z: 0}
-  savedRectSize: {x: 431.99994, y: 72.00003}
+  savedRectSize: {x: 174.3, y: 21.800003}
   savedColor: {r: 0, g: 0, b: 0, a: 0.147}
   savedTextUV0: {x: 0, y: 0}
   savedFill: 1
@@ -9966,7 +9968,7 @@ MonoBehaviour:
   DoNotTesselate: 0
   savedPos: {x: -0.000030517578, y: -720, z: 0}
   savedUp: {x: 0, y: 1, z: 0}
-  savedRectSize: {x: 431.99994, y: 20}
+  savedRectSize: {x: 174.3, y: 20}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
   savedTextUV0: {x: 0, y: 0}
   savedFill: 1
@@ -10070,9 +10072,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: -396.00046, y: 0.00032586674, z: 0.00087219244}
+  savedPos: {x: -159.77516, y: -0.00007745216, z: -0.0000685167}
   savedUp: {x: 0, y: 1, z: 0}
-  savedRectSize: {x: 720, y: 1440}
+  savedRectSize: {x: 290.5, y: 436}
   savedColor: {r: 0, g: 0.4913793, b: 0.83823526, a: 1}
   savedTextUV0: {x: 0, y: 0}
   savedFill: 1
@@ -10703,12 +10705,12 @@ Transform:
   m_PrefabParentObject: {fileID: 465492, guid: 312c52d27be2d2d42acea3ccebc4694b, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 812984394}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 31.17, y: -1.38, z: -11.83}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 133959756}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &829895507
 GameObject:
@@ -11294,9 +11296,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: 396.0004, y: 0.00032586674, z: 0.00087219244}
+  savedPos: {x: 159.77498, y: -0.00007745216, z: -0.0000685167}
   savedUp: {x: 0, y: 1, z: 0}
-  savedRectSize: {x: 720, y: 1440}
+  savedRectSize: {x: 290.5, y: 436}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
   savedTextUV0: {x: 0, y: 0}
   savedFill: 1
@@ -11506,7 +11508,7 @@ MonoBehaviour:
   DoNotTesselate: 0
   savedPos: {x: -0.000061035156, y: 576.0008, z: 0}
   savedUp: {x: 0, y: 1, z: 0}
-  savedRectSize: {x: 1583.9999, y: 575.9999}
+  savedRectSize: {x: 639.1, y: 174.4}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
   savedTextUV0: {x: 0, y: 0}
   savedFill: 1
@@ -19202,7 +19204,7 @@ RectTransform:
   m_GameObject: {fileID: 1363752459}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2}
-  m_LocalScale: {x: 0.0022222225, y: 0.0022222225, z: 0.0022222225}
+  m_LocalScale: {x: 0.007343658, y: 0.007343658, z: 0.007343658}
   m_Children:
   - {fileID: 2036061252}
   - {fileID: 582951966}
@@ -19217,7 +19219,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.00000071525574}
-  m_SizeDelta: {x: 1440, y: 1440}
+  m_SizeDelta: {x: 581, y: 436}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1363752461
 MonoBehaviour:
@@ -25938,9 +25940,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: 395.99988, y: 0.00004687498, z: 0.0008990478}
+  savedPos: {x: 159.77516, y: -0.00011233374, z: 0.00025252823}
   savedUp: {x: 0, y: 1, z: 0}
-  savedRectSize: {x: 720, y: 1440}
+  savedRectSize: {x: 290.5, y: 436}
   savedColor: {r: 0, g: 0.4913793, b: 0.83823526, a: 1}
   savedTextUV0: {x: 0, y: 0}
   savedFill: 1
@@ -28041,7 +28043,7 @@ MonoBehaviour:
   DoNotTesselate: 0
   savedPos: {x: -0.000061035156, y: 300.00018, z: 0}
   savedUp: {x: 0, y: 1, z: 0}
-  savedRectSize: {x: 1583.9999, y: 720}
+  savedRectSize: {x: 639.1, y: 218.00003}
   savedColor: {r: 0, g: 0, b: 0, a: 1}
   savedTextUV0: {x: 0, y: 0}
   savedFill: 1
@@ -28432,12 +28434,12 @@ Transform:
   m_PrefabParentObject: {fileID: 454136, guid: 312c52d27be2d2d42acea3ccebc4694b, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1930199940}
-  m_LocalRotation: {x: 0, y: 0.2588191, z: 0, w: 0.9659258}
+  m_LocalRotation: {x: -0, y: 0.2588191, z: -0, w: 0.9659258}
   m_LocalPosition: {x: 26.86, y: 0, z: -24.79}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 133959756}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
 --- !u!1 &1933246873
 GameObject:
