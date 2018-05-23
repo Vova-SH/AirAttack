@@ -7,6 +7,7 @@ public class UnitScript : MonoBehaviour
 {
 	public AudioSource death;
 	private List<TowerScript> towers = new List<TowerScript> ();
+	public ParticleSystem damage;
 	public int health = 100;
 	public int armor = 0;
 	public float speed = 5;
@@ -15,7 +16,6 @@ public class UnitScript : MonoBehaviour
 	public RectTransform layerForIndicator;
 	public UnitPosition indicator;
 	public Color colorIndicator;
-
 	private float target = -1;
 	private Vector3 delta;
 	private MoveStatus callback = null;
@@ -24,6 +24,12 @@ public class UnitScript : MonoBehaviour
 	private unsafe WrapMode* wrapMode = null;
 	private unsafe float* progress = null, offset = null;
 	private float deltaProgress = 0, endProgress = 0;
+	private int totalHealth;
+
+	void Awake()
+	{
+		totalHealth = health;
+	}
 
 	void Start ()
 	{
@@ -104,6 +110,10 @@ public class UnitScript : MonoBehaviour
 	{
 		//TODO: add type
 		health -= damage;
+		var emission = this.damage.emission;
+        emission.rateOverTime = (totalHealth - health)/((float)totalHealth)*100;
+		//this.damage.emission.rateOverTime.constant = (totalHealth - health)/((float)totalHealth)*100;
+	
 		if (health < 1) {
 			for (int i = 0; i < towers.Count; i++) {
 				towers [i].DestroyUnit (this);
