@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: 670ee04592e8349dfa469af63f32f967
+timeCreated: 1522946149
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: m_Barrel
+    100004: m_Bricks
+    100006: m_Clothline
+    100008: m_Fence
+    100010: m_Grass
+    100012: m_Ground
+    100014: m_House
+    100016: m_Log
+    100018: m_Pier
+    100020: m_Plants
+    100022: m_Rock
+    100024: m_StoneLedge
+    100026: m_Tree
+    100028: m_Water
+    100030: m_WoodenBeams
+    400000: //RootNode
+    400002: m_Barrel
+    400004: m_Bricks
+    400006: m_Clothline
+    400008: m_Fence
+    400010: m_Grass
+    400012: m_Ground
+    400014: m_House
+    400016: m_Log
+    400018: m_Pier
+    400020: m_Plants
+    400022: m_Rock
+    400024: m_StoneLedge
+    400026: m_Tree
+    400028: m_Water
+    400030: m_WoodenBeams
+    2100000: 'Material #81'
+    2100002: 'Material #158'
+    2100004: 'Material #2'
+    2100006: 'Material #1'
+    2100008: 'Material #25'
+    2100010: 'Material #58'
+    2100012: 'Material #31'
+    2100014: 'Material #29'
+    2100016: 'Material #26'
+    2100018: 'Material #166'
+    2100020: 'Material #27'
+    2100022: 'Material #59'
+    2100024: 'Material #30'
+    2100026: 'Material #28'
+    2100028: 'Material #33'
+    2100030: 'Material #101'
+    2100032: 'Material #102'
+    2100034: 'Material #103'
+    2100036: 'Material #106'
+    2100038: 'Material #109'
+    2100040: 'Material #32'
+    2100042: 'Material #152'
+    2100044: 'Material #155'
+    2300000: m_Barrel
+    2300002: m_Bricks
+    2300004: m_Clothline
+    2300006: m_Fence
+    2300008: m_Grass
+    2300010: m_Ground
+    2300012: m_House
+    2300014: m_Log
+    2300016: m_Pier
+    2300018: m_Plants
+    2300020: m_Rock
+    2300022: m_StoneLedge
+    2300024: m_Tree
+    2300026: m_Water
+    2300028: m_WoodenBeams
+    3300000: m_Barrel
+    3300002: m_Bricks
+    3300004: m_Clothline
+    3300006: m_Fence
+    3300008: m_Grass
+    3300010: m_Ground
+    3300012: m_House
+    3300014: m_Log
+    3300016: m_Pier
+    3300018: m_Plants
+    3300020: m_Rock
+    3300022: m_StoneLedge
+    3300024: m_Tree
+    3300026: m_Water
+    3300028: m_WoodenBeams
+    4300000: m_House
+    4300002: m_WoodenBeams
+    4300004: m_Ground
+    4300006: m_Pier
+    4300008: m_StoneLedge
+    4300010: m_Clothline
+    4300012: m_Rock
+    4300014: m_Fence
+    4300016: m_Barrel
+    4300018: m_Log
+    4300020: m_Tree
+    4300022: m_Grass
+    4300024: m_Bricks
+    4300026: m_Water
+    4300028: m_Plants
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
