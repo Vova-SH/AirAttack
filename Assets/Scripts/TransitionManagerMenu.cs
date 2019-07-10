@@ -6,6 +6,8 @@ using UnityEngine;
 public class TransitionManagerMenu : MonoBehaviour {
 	public MenuElementChanger lastPosition;
 
+	public Animator hideEye;
+
 	public void changePosition(MenuElementChanger currentItem){
 		if (lastPosition != null) {
 			foreach (MenuElementChanger item in lastPosition.onActivateItems) {
@@ -17,6 +19,7 @@ public class TransitionManagerMenu : MonoBehaviour {
 
 	public void LoadScenes(int levelNum)
 	{
-		SceneManager.LoadSceneAsync ("Level"+levelNum);
+		hideEye.Play("LoadLevel");
+		SceneManager.LoadSceneAsync (levelNum);
 	}
 }
