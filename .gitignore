@@ -34,3 +34,7 @@ Thumbs.db*
 *.apk
 *.log
 iOS
+Assets/Scenes/Level1/
+Assets/Scenes/MainMenu/
+.vscode/
+Assets/Scenes/Level2/
